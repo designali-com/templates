@@ -1,0 +1,126 @@
+export const metadata = {
+  title: 'UI/UX Design Principles That Actually Hold Up in Production',
+  alternates: {
+    canonical: '/1',
+  },
+};
+ 
+## UI/UX Design Principles That Actually Hold Up in Production
+
+Most lists of "UI/UX principles" read like they were written for a portfolio review, not for someone shipping a product on a Friday deadline. This is the version I actually use — the stuff that survives contact with real constraints: tight timelines, inconsistent content, and developers (sometimes me) who have to build it.
+
+## 1. Clarity Beats Cleverness
+
+The fastest way to lose a user is to make them think about your interface instead of their task.
+
+- If a label needs a tooltip to explain what it does, rewrite the label first.
+- If an icon needs a caption to be understood, it's decoration, not communication.
+- Novelty in navigation patterns is a tax every user pays. Charge it only when the payoff is real.
+
+> Clever design that requires an explanation has already failed the first test of good design.
+
+## 2. Hierarchy Is Not Decoration — It's Information
+
+Visual hierarchy tells users what matters *before* they read a single word. Size, weight, color, and spacing are doing semantic work, not just aesthetic work.
+
+A quick gut-check for any screen you design:
+
+```text
+Squint at it. What's the first thing you notice?
+If it's not the primary action or the primary information —
+your hierarchy is wrong, not your content.
+```
+
+Practical levers, in order of impact:
+
+1. **Size** — the blunt instrument. Use sparingly.
+2. **Contrast** — color and weight against a quiet background.
+3. **Spacing** — proximity groups related things; distance separates unrelated things.
+4. **Position** — top-left to bottom-right (in LTR languages) is read first.
+
+## 3. Consistency Is a System, Not a Vibe
+
+"Keep it consistent" is useless advice without a system to be consistent *with*. This is where design tokens and component libraries earn their keep.
+
+```jsx
+// A button that inherits from the system instead of reinventing itself
+export function Button({ variant = "primary", size = "md", children, ...props }) {
+  return (
+    <button
+      className={cn(buttonVariants({ variant, size }))}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+}
+```
+
+When every button, spacing value, and color comes from a shared token set, consistency stops being a discipline you have to enforce and becomes a side effect of the tooling.
+
+## 4. Feedback Is Non-Negotiable
+
+Every user action deserves a reaction — even if that reaction is "nothing is happening yet, but here's proof I heard you."
+
+| User Action | Minimum Feedback |
+|---|---|
+| Button click | Visual press state within 100ms |
+| Form submit | Loading state, then success/error |
+| Async operation >1s | Progress indicator or skeleton |
+| Destructive action | Confirmation or undo window |
+
+Silence after an action reads as a broken interface, even when the system is working perfectly under the hood.
+
+## 5. Accessibility Is a Baseline, Not a Feature
+
+Treating accessibility as a "nice to have" that gets cut when the sprint runs long produces interfaces that quietly exclude real users. A few non-negotiables:
+
+- Color is never the *only* signal (pair it with icons, text, or patterns).
+- Every interactive element is reachable and operable by keyboard.
+- Contrast ratios meet WCAG AA at minimum — check this in your design tool, not after launch.
+- Motion respects `prefers-reduced-motion`.
+
+## 6. Design in the Medium You'll Ship In
+
+Static mockups lie about how content actually behaves. Real names are longer than "John Doe." Real lists are sometimes empty. Real images are sometimes ugly aspect ratios.
+
+Design (or at least stress-test) your screens against:
+
+- Empty states
+- Loading states
+- Error states
+- Overflow content (long text, many items)
+- Slow networks
+
+If a layout only works with the happy-path content the designer typed in, it isn't finished.
+
+## 7. Motion Should Explain, Not Decorate
+
+Animation is a communication tool before it's a delight tool. Good motion answers a question:
+
+- Where did this element come from? → Transition origin.
+- What just changed? → Highlight or transform.
+- Is the system still responsive? → Loading and progress states.
+
+```css
+/* Motion with purpose: signals state change, respects user preference */
+.card {
+  transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+}
+```
+
+If you can mute the animation entirely and the interface still makes sense, the animation was polish. If muting it breaks comprehension, it was load-bearing — treat it with the same rigor as your layout.
+
+## Closing Thought
+
+None of these principles are new. What changes project to project is the discipline to actually apply them under a deadline, with a real content team, and a codebase that doesn't always cooperate. The designers whose work holds up over time aren't the ones with the most original ideas — they're the ones who protect clarity, hierarchy, and consistency even when it would be easier not to.
+
+---
+
+*Have a principle that's saved you in production? I'd love to hear it — reach out or drop a comment below.*
