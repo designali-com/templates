@@ -25,7 +25,7 @@ export function Header() {
     const scrolled = useScroll(10);
 
     return (
-        <div className="mx-3 fixed z-50 w-full top-3 ">
+        <div className="fixed z-50 w-full px-3 top-3">
             <header
                 className={cn("rounded-full bg-background/60 border-dashed drop-shadow-2xl backdrop-blur-md max-w-4xl mx-auto z-50 w-full border", {
                     " ":

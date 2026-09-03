@@ -45,7 +45,7 @@ export function HeroSection() {
                 <div className="relative z-10 mx-auto flex w-full max-w-3xl flex-col items-center justify-center gap-3 px-4 text-center">
 
                     <h1 className="relative mx-auto left-1/2 z-0 w-full mt-20 -translate-x-1/2 py-6 mix-blend-multiply text-center text-[16vw] md:text-[8vw] leading-[0.8em] font-black tracking-tighter uppercase">
-                        design{"  "}se <br /> code{"  "}tak
+                        design se <br /> code tak
                     </h1>
 
                     <p className="text-sm px-6 -mt-4 max-w-xl">

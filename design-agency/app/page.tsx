@@ -3,6 +3,7 @@ import { EmptySection } from "@/components/home/empty"
 import { FeaturesSection } from "@/components/home/features" 
 import { HeroSection } from "@/components/home/hero"
 import { Clients } from "@/components/home/clients"
+import { AboutAI } from "@/components/home/about-ai"
 
 export default function Page() {
   return (
@@ -13,6 +14,7 @@ export default function Page() {
         <Clients/>
         <DesignSection />
         <FeaturesSection />
+        <AboutAI/>
         <EmptySection /> 
       </div>
     </div>

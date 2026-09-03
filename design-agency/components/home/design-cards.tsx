@@ -42,7 +42,7 @@ export function DesignSection() {
                                 colorBack="#00000000"
                                 stepsPerColor={1}
                                 size={1}
-                                scale={2}
+                                scale={1.5}
                                 sizeRange={1}
                                 spreading={1}
                                 speed={0.5}
@@ -128,7 +128,7 @@ export function DesignSection() {
                                 colorFront="#00aaff"
                                 density={0.5}
                                 distortion={0}
-                                strokeWidth={0.5}
+                                strokeWidth={0.1}
                                 strokeTaper={0}
                                 strokeCap={0}
                                 noise={1}
