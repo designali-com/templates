@@ -11,6 +11,9 @@ importers:
       '@base-ui/react':
         specifier: ^1.7.0
         version: 1.7.0(@types/react@19.2.18)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@designali/logos':
+        specifier: ^0.0.1
+        version: 0.0.1(react@19.2.4)
       '@paper-design/shaders-react':
         specifier: ^0.0.78
         version: 0.0.78(@types/react@19.2.18)(react@19.2.4)
@@ -20,6 +23,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      cn:
+        specifier: ^0.2.4
+        version: 0.2.4
       lucide-react:
         specifier: ^1.39.0
         version: 1.39.0(react@19.2.4)
@@ -241,6 +247,11 @@ packages:
     peerDependenciesMeta:
       '@types/react':
         optional: true
+
+  '@designali/logos@0.0.1':
+    resolution: {integrity: sha512-PmNr5XFbjeTKG0hv8EvLYR28tRlvExBzb3Ztt/bo+l6f3JPez3LBO84awI6Dk5qg97j6z7jgfE8+hf1sKUjLrg==}
+    peerDependencies:
+      react: '>=17'
 
   '@dotenvx/dotenvx@1.75.1':
     resolution: {integrity: sha512-/BITOC9dmS/edY2zQwZNicQ059O6RKabtQfyEafV0nGtfYRNHYy1DIPiYVcov40+tob9hfmBnbR963dS+EQ1DQ==}
@@ -1127,6 +1138,11 @@ packages:
   clsx@2.1.1:
     resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
     engines: {node: '>=6'}
+
+  cn@0.2.4:
+    resolution: {integrity: sha512-SzQvoh5FwizWtQg9+JueKdjWhlfCZMdu5DqNHm9q1wUlRVmKb9WXlepR9bTTbPwzEOyX1ujJ6lcCppmn3bNUCg==}
+    engines: {node: '>=20'}
+    hasBin: true
 
   code-block-writer@13.0.3:
     resolution: {integrity: sha512-Oofo0pq3IKnsFtuHqSF7TqBfr71aeyZDVJ0HpmqB7FBM2qEigL0iPONSCZSO9pE9dZTAxANe5XHG9Uy0YMv8cg==}
@@ -3230,6 +3246,10 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.2.18
 
+  '@designali/logos@0.0.1(react@19.2.4)':
+    dependencies:
+      react: 19.2.4
+
   '@dotenvx/dotenvx@1.75.1':
     dependencies:
       '@dotenvx/primitives': 0.8.0
@@ -4044,6 +4064,8 @@ snapshots:
   client-only@0.0.1: {}
 
   clsx@2.1.1: {}
+
+  cn@0.2.4: {}
 
   code-block-writer@13.0.3: {}
 

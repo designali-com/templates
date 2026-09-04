@@ -7,52 +7,62 @@ interface MarqueeProps extends ComponentPropsWithoutRef<"div"> {
    * Optional CSS class name to apply custom styles
    */
   className?: string
+
   /**
    * Whether to reverse the animation direction
    * @default false
    */
   reverse?: boolean
+
   /**
    * Whether to pause the animation on hover
    * @default false
    */
   pauseOnHover?: boolean
+
   /**
    * Content to be displayed in the marquee
    */
   children: React.ReactNode
+
   /**
    * Whether to animate vertically instead of horizontally
    * @default false
    */
   vertical?: boolean
+
   /**
    * Number of times to repeat the content
    * @default 5
    */
   repeat?: number
+
   /**
    * Animation speed variant or custom duration in seconds
    * @default "normal"
    */
   speed?: "slow" | "normal" | "fast" | number
+
   /**
-   * Gap between repeated items (in pixels or any CSS unit)
+   * Gap between repeated items
    * @default "6px"
    */
   gap?: string | number
+
   /**
-   * Apply fade effect at edges for smoother visual experience
+   * Apply fade effect at edges
    * @default true
    */
   fade?: boolean
+
   /**
-   * Delay before animation starts (in seconds)
+   * Delay before animation starts
    * @default 0
    */
   delay?: number
+
   /**
-   * Whether to apply auto-fill to calculate optimal repeat count
+   * Whether to apply auto-fill
    * @default false
    */
   autoFill?: boolean
@@ -79,14 +89,16 @@ export function Marquee({
   }
 
   const gapValue = typeof gap === "number" ? `${gap}px` : gap
+
   const duration = typeof speed === "number" ? `${speed}s` : undefined
+
   const repeatCount = autoFill ? 10 : repeat
 
   return (
     <div
       {...props}
       className={cn(
-        "group relative flex overflow-hidden p-1",
+        "group relative isolate flex overflow-hidden p-1",
         typeof speed === "string" ? speedVariants[speed] : "",
         {
           "flex-row": !vertical,
@@ -102,42 +114,50 @@ export function Marquee({
         } as React.CSSProperties
       }
     >
+      {/* Left / Top Fade */}
       {fade && (
-        <>
-          <div
-            className={cn(
-              "pointer-events-none absolute z-10",
-              vertical
-                ? "inset-x-0 top-0 h-1/6 bg-gradient-to-b from-background"
-                : "inset-y-0 left-0 w-1/6 bg-gradient-to-r from-background"
-            )}
-          />
-          <div
-            className={cn(
-              "pointer-events-none absolute z-10",
-              vertical
-                ? "inset-x-0 bottom-0 h-1/6 bg-gradient-to-t from-background"
-                : "inset-y-0 right-0 w-1/6 bg-gradient-to-l from-background"
-            )}
-          />
-        </>
+        <div
+          className={cn(
+            "pointer-events-none absolute z-20",
+            vertical
+              ? "inset-x-0 top-0 h-1/4 bg-gradient-to-b from-background via-background/80 to-transparent"
+              : "inset-y-0 left-0 w-1/6 bg-gradient-to-r from-background via-background/80 to-transparent"
+          )}
+        />
       )}
+
+      {/* Marquee Content */}
       {Array(repeatCount)
         .fill(0)
         .map((_, i) => (
           <div
             key={i}
-            className={cn("flex shrink-0 justify-around [gap:var(--gap)] pr-[var(--gap)]", {
-              "animate-marquee flex-row": !vertical,
-              "animate-marquee-vertical flex-col": vertical,
-              "group-hover:[animation-play-state:paused]": pauseOnHover,
-              "[animation-direction:reverse]": reverse,
-              "[animation-delay:var(--delay)]": delay > 0,
-            })}
+            className={cn(
+              "relative z-0 flex shrink-0 justify-around [gap:var(--gap)] pr-[var(--gap)]",
+              {
+                "animate-marquee flex-row": !vertical,
+                "animate-marquee-vertical flex-col": vertical,
+                "group-hover:[animation-play-state:paused]": pauseOnHover,
+                "[animation-direction:reverse]": reverse,
+                "[animation-delay:var(--delay)]": delay > 0,
+              }
+            )}
           >
             {children}
           </div>
         ))}
+
+      {/* Right / Bottom Fade */}
+      {fade && (
+        <div
+          className={cn(
+            "pointer-events-none absolute z-20",
+            vertical
+              ? "inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-background via-background/80 to-transparent"
+              : "inset-y-0 right-0 w-1/6 bg-gradient-to-l from-background via-background/80 to-transparent"
+          )}
+        />
+      )}
     </div>
   )
-}
+} 

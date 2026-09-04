@@ -6,8 +6,9 @@ import Link from "next/link"
 
 export function AboutAI() {
   return (
-    <div className="relative md:my-20 py-3 mx-auto max-w-xl w-full items-center flex flex-col">
-          <div className="flex gap-3 border rounded-lg bg-background border-dashed p-10 md:shadow-2xl/10 text-muted-foreground flex-col w-full">
+    <div className="relative md:my-40 py-10 mx-auto max-w-xl w-full items-center flex flex-col">
+      <div className="p-3 border rounded-xl shadow-2xl/10 border-dashed">
+          <div className="flex gap-3 border rounded-lg shadow-[inset_0_6px_6px_rgba(255,255,255,0.4),inset_0_-3px_6px_rgba(0,0,0,0.1),inset_0_-4px_8px_rgba(0,0,0,0.2)] dark:shadow-[inset_0_6px_6px_rgba(0,0,0,0.3),inset_0_-3px_6px_rgba(0,0,0,0.1),inset_0_-4px_8px_rgba(0,0,0,0.2)] bg-foreground border-dashed p-10 text-muted flex-col w-full">
             <p>
               I’m a passionate in Design and Code based in
               Bokaro Steel City, India. I’m driven by a mission
@@ -30,6 +31,7 @@ export function AboutAI() {
                 shadcn/ui
               </Link>.
             </p>
+          </div>
           </div>
 
           <Button className="mt-10">

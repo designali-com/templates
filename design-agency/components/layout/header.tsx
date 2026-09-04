@@ -6,18 +6,22 @@ import { useScroll } from "@/hooks/use-scroll";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export const navLinks = [
+export const navLinks = [ 
     {
-        label: "Features",
-        href: "#",
-    },
-    {
-        label: "Pricing",
-        href: "#",
+        label: "Works",
+        href: "/works",
     },
     {
         label: "About",
-        href: "#",
+        href: "/about",
+    },
+    {
+        label: "Pricing",
+        href: "/#pricing",
+    },
+    {
+        label: "Blogs",
+        href: "/blogs",
     },
 ];
 
@@ -36,8 +40,8 @@ export function Header() {
 
                     {/* Logo */}
                     <a
-                        className="rounded-md p-2 hover:bg-muted dark:hover:bg-muted/50"
-                        href="#"
+                        className="rounded-md p-2"
+                        href="/"
                     >
                         <Logo className="w-10 h-fit" />
                         

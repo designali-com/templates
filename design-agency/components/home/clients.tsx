@@ -1,51 +1,36 @@
-/* eslint-disable @next/next/no-img-element */
-import { cn } from "@/lib/utils"
+
 import { Marquee } from "@/components/ui/marquee"
 
-const technologies = [
-  { name: "JKtype", image: "/logos/c3-2.png" },
-  { name: "LG", image: "/logos/c10-2.png" },
-  { name: "TeaValley", image: "/logos/c5-2.png" },
-  { name: "Apollo", image: "/logos/c4-2.png" },
-  { name: "DB", image: "/logos/c18-2.png" },
-  { name: "SC", image: "/logos/c8-2.png" },
-  { name: "PB", image: "/logos/c1-2.png" },
-  { name: "TV", image: "/logos/c2-2.png" },
-]
+import {
+  ClaudeAIWordmark,
+  CursorWordmark,
+  GithubWordmark,
+  GoogleGeminiWordmark,
+  GoogleWordmark,
+  GrokWordmark,
+  OpenAIWordmark,
+  ReplicateWordmark,
+} from "@designali/logos"
 
-export function Clients({ className }: { className?: string }) {
+export function Clients() {
   return (
-    <section
-      className={cn(
-        "group overflow-hidden relative -mt-40 md:mt-20 md:-z-50 duration-300 hover:bg-foreground/5",
-        className
-      )}
-    >
-      <div className="relative">
-        <h1 className="absolute inset-0 z-20 flex items-center justify-center text-foreground uppercase opacity-0 transition-all duration-300 group-hover:opacity-100">
-          Work for Brands Like
-        </h1>
-
-        <div className="flex flex-col items-center md:flex-row">
-          <div className="relative w-full py-2">
-            <div className="transition duration-300 group-hover:opacity-60 group-hover:blur-sm">
-              <Marquee>
-                {technologies.map((tech, index) => (
-                  <div key={`${tech.name}-${index}`} className="px-8 py-2">
-                    <img
-                      className="mx-auto h-12 w-auto dark:invert"
-                      src={tech.image}
-                      alt={tech.name}
-                    />
-                  </div>
-                ))}
-              </Marquee>
-            </div>
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-20 md:w-40 bg-linear-to-r from-background" />
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-20 md:w-40 bg-linear-to-l from-background" />
-          </div>
-        </div>
+    <div className="flex w-full mt-20 flex-col items-center justify-center">
+      <div className="w-full -z-20 overflow-hidden">
+        <Marquee
+          fade
+          gap="70px"
+          className="w-full"
+        >
+          <OpenAIWordmark size={100} />
+          <ClaudeAIWordmark size={100} />
+          <ReplicateWordmark size={100} />
+          <CursorWordmark size={100} />
+          <GoogleGeminiWordmark size={90} />
+          <GithubWordmark size={90} />
+          <GrokWordmark size={100} />
+          <GoogleWordmark size={100} />
+        </Marquee>
       </div>
-    </section>
+    </div>
   )
-}
+} 

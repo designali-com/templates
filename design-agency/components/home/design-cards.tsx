@@ -1,13 +1,7 @@
+
 import Image from "next/image"
 
-import { AboutMe } from "./about-me"
-
-import {
-    Dithering,
-    DotOrbit,
-    GrainGradient,
-    Spiral,
-} from "@paper-design/shaders-react"
+import { Dithering, DotOrbit, Spiral } from "@paper-design/shaders-react"
 
 export function DesignSection() {
     return (
@@ -16,24 +10,21 @@ export function DesignSection() {
                 {/* Heading */}
                 <div>
                     <h1 className="mx-auto mb-10 max-w-xs px-6 text-center text-xl md:max-w-full md:text-3xl">
-                        Design, the way it was always meant to be.
+                        Design, built to make your brand stand out.
                     </h1>
                 </div>
 
                 {/* Cards */}
                 <div className="grid w-full grid-cols-1 gap-3 md:grid-cols-3">
-                    {/* Card 1 — Subscribe */}
-                    <div className="h-[410px] overflow-hidden rounded-lg border-dashed border">
-                        <div className="relative h-full rounded-md">
+                    {/* Card 1 — Strategy */}
+                    <div className="h-[430px] md:h-[460px] overflow-hidden rounded-lg border border-dashed">
+                        <div className="relative h-full shadow-[inset_0_6px_6px_rgba(255,255,255,0.4),inset_0_-3px_6px_rgba(0,0,0,0.1),inset_0_-4px_8px_rgba(0,0,0,0.2)] rounded-md">
                             <Image
-                                src="/og.jpg"
-                                alt="Your Image"
+                                src="/stock/strategy.jpg"
+                                alt="DesignAli Strategy"
                                 width={300}
                                 height={300}
-                                className="absolute left-1/2 top-36 z-10 h-[200px] w-[200px]
-                -translate-x-1/2 -translate-y-1/2 rounded-md border-4
-                bg-background object-cover shadow-xl transition-all
-                duration-500 hover:scale-105"
+                                className="absolute border left-1/2 top-39 z-10 h-[250px] w-[250px] -translate-x-1/2 -translate-y-1/2 rounded-sm bg-background object-cover shadow-xl transition-all duration-500 hover:scale-105"
                             />
 
                             <DotOrbit
@@ -48,37 +39,29 @@ export function DesignSection() {
                                 speed={0.5}
                             />
 
-                            <div
-                                className="absolute bottom-0 left-1/2 w-full
-                -translate-x-1/2 rounded-b-sm
-                bg-gradient-to-t from-white to-transparent
-                p-8 pt-32 dark:from-black dark:to-transparent"
-                            >
+                            <div className="absolute bottom-0 left-1/2 w-full -translate-x-1/2 rounded-b-sm bg-gradient-to-t from-white to-transparent p-8 pt-60 dark:from-black dark:to-transparent">
                                 <div>
-                                    <h1 className="text-2xl">Subscribe</h1>
+                                    <h2 className="text-2xl">Strategy</h2>
 
-                                    <p className="text-sm text-muted-foreground">
-                                        Subscribe to a plan, get access to Dashboard, and start
-                                        listing your requests.
+                                    <p className="text-sm pt-2 text-muted-foreground">
+                                        We shape your brand strategy, positioning, and creative direction to give your business a clear and confident identity.
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Card 2 — Request */}
-                    <div className="h-[410px] overflow-hidden rounded-lg border-dashed border">
-                        <div className="relative h-full rounded-md">
+                    {/* Card 2 — Design */}
+                    <div className="h-[430px] md:h-[460px] overflow-hidden rounded-lg border border-dashed">
+                        <div className="relative h-full shadow-[inset_0_6px_6px_rgba(255,255,255,0.4),inset_0_-3px_6px_rgba(0,0,0,0.1),inset_0_-4px_8px_rgba(0,0,0,0.2)] rounded-md">
                             <Image
-                                src="/og.jpg"
-                                alt="Your Image"
+                                src="/stock/design.jpg"
+                                alt="DesignAli Creative Design"
                                 width={300}
                                 height={300}
-                                className="absolute left-1/2 top-36 z-10 h-[200px] w-[200px]
-                -translate-x-1/2 -translate-y-1/2 rounded-md border-4
-                bg-background object-cover shadow-xl transition-all
-                duration-500 hover:scale-105"
+                                className="absolute border left-1/2 top-39 z-10 h-[250px] w-[250px] -translate-x-1/2 -translate-y-1/2 rounded-sm bg-background object-cover shadow-xl transition-all duration-500 hover:scale-105"
                             />
+
                             <Dithering
                                 className="absolute bottom-0 h-full w-full rounded-md"
                                 colorBack="#00000000"
@@ -90,36 +73,27 @@ export function DesignSection() {
                                 offsetY={-0.15}
                             />
 
-                            <div
-                                className="absolute bottom-0 left-1/2 w-full
-                -translate-x-1/2 rounded-b-sm
-                bg-gradient-to-t from-white to-transparent
-                p-8 pt-32 dark:from-black dark:to-transparent"
-                            >
+                            <div className="absolute bottom-0 left-1/2 w-full -translate-x-1/2 rounded-b-sm bg-gradient-to-t from-white to-transparent p-8 pt-60 dark:from-black dark:to-transparent">
                                 <div>
-                                    <h1 className="text-2xl">Request</h1>
+                                    <h2 className="text-2xl">Design</h2>
 
-                                    <p className="text-sm text-muted-foreground">
-                                        Request whatever you'd like, from branding, website,
-                                        social media to any design.
+                                    <p className="text-sm pt-2 text-muted-foreground">
+                                        We create memorable brands, websites, and digital experiences that look distinctive, feel intuitive, and connect with your audience.
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Card 3 — Receive */}
-                    <div className="h-[410px] overflow-hidden rounded-lg border-dashed border">
-                        <div className="relative h-full rounded-md">
+                    {/* Card 3 — Development */}
+                    <div className="h-[430px] md:h-[460px] overflow-hidden rounded-lg border border-dashed">
+                        <div className="relative h-full shadow-[inset_0_6px_6px_rgba(255,255,255,0.4),inset_0_-3px_6px_rgba(0,0,0,0.1),inset_0_-4px_8px_rgba(0,0,0,0.2)] rounded-md">
                             <Image
-                                src="/og.jpg"
-                                alt="Your Image"
+                                src="/stock/development.jpg"
+                                alt="DesignAli Development"
                                 width={300}
                                 height={300}
-                                className="absolute left-1/2 top-36 z-10 h-[200px] w-[200px]
-                -translate-x-1/2 -translate-y-1/2 rounded-md border-4
-                bg-background object-cover shadow-xl transition-all
-                duration-500 hover:scale-105"
+                                className="absolute border left-1/2 top-39 z-10 h-[250px] w-[250px] -translate-x-1/2 -translate-y-1/2 rounded-sm bg-background object-cover shadow-xl transition-all duration-500 hover:scale-105"
                             />
 
                             <Spiral
@@ -138,24 +112,35 @@ export function DesignSection() {
                                 scale={1.3}
                             />
 
-                            <div
-                                className="absolute bottom-0 left-1/2 w-full
-                -translate-x-1/2 rounded-b-sm
-                bg-gradient-to-t from-white to-transparent
-                p-8 pt-32 dark:from-black dark:to-transparent"
-                            >
+                            <div className="absolute bottom-0 left-1/2 w-full -translate-x-1/2 rounded-b-sm bg-gradient-to-t from-white to-transparent p-8 pt-60 dark:from-black dark:to-transparent">
                                 <div>
-                                    <h1 className="text-2xl">Receive</h1>
+                                    <h2 className="text-2xl">Development</h2>
 
-                                    <p className="text-sm text-muted-foreground">
-                                        Receive your design within two business days on average.
+                                    <p className="text-sm pt-2 text-muted-foreground">
+                                        We turn designs into fast, responsive, and scalable digital experiences built to perform across every modern device.
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div className="relative w-full border mt-3 border-dashed h-full rounded-md lg:rounded-full">
+                    <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+                        <div className="border-b border-dashed py-10 md:border-r lg:border-b-0 lg:border-r">
+                            <p className="text-center text-md">48 Hours Delivery</p>
+                        </div>
+                        <div className="border-b py-10 border-dashed lg:border-b-0 lg:border-r">
+                            <p className="text-center text-md">Access to Design Portal</p>
+                        </div>
+                        <div className="border-b py-10 border-dashed md:border-r md:border-b-0 lg:border-r">
+                            <p className="text-center text-md">Top-notch quality</p>
+                        </div>
+                        <div className="py-10">
+                            <p className="text-center text-md">Unlimited Design Requests</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
-}
+} 
