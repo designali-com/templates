@@ -7,15 +7,13 @@ const agencyLinks = [
   { label: "Strategy", href: "/services/strategy" },
   { label: "Branding", href: "/services/branding" },
   { label: "Web Design", href: "/services/web-design" },
-  { label: "Development", href: "/services/development" },
-  { label: "Design Systems", href: "/services/design-systems" },
+  { label: "Development", href: "/services/development" }, 
 ]
 
 const companyLinks = [
   { label: "About", href: "/about" },
   { label: "Work", href: "/work" },
-  { label: "Services", href: "/services" },
-  { label: "Clients", href: "/clients" },
+  { label: "Services", href: "/services" }, 
   { label: "Contact", href: "/contact" },
 ]
 
