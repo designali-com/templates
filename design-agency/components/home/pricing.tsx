@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 
 export function Pricing() {
     return (
-        <section className=" flex h-screen md:h-[700px] relative w-full flex-col items-center px-3 justify-center md:pb-20">
+        <section id="pricing" className="scroll-mt-40 flex h-screen md:h-[700px] relative w-full flex-col items-center px-3 justify-center md:pb-20">
             <div className="z-10 flex justify-center">
                 <div className="grid max-w-5xl items-center gap-6 md:grid-cols-5 md:gap-0 md:px-12">
                     <div className="bg-background/50 flex h-min flex-col justify-between space-y-8 border-y p-6 backdrop-blur-lg md:col-span-2 md:my-2 md:rounded-l-md md:border md:border-r-0 lg:p-10">
@@ -48,7 +48,7 @@ export function Pricing() {
                         </div>
                     </div>
 
-                    <div className="bg-muted rounded-md border p-6 shadow-2xl/10 md:col-span-3 lg:p-10">
+                    <div className="bg-background rounded-md border p-6 shadow-2xl/10 md:col-span-3 lg:p-10">
                         <div className="space-y-4">
                             <div>
                                 <h2 className="text-xl font-thin">Business Plan</h2>

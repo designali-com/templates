@@ -28,6 +28,7 @@
     "**/*.ts",
     "**/*.tsx",
     "**/*.mts",
+    "**/*.mdx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
   ],
