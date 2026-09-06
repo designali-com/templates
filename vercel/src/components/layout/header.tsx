@@ -41,8 +41,7 @@ import {
   BookText,
   BriefcaseBusiness,
   Code,
-  Component,
-  Codepen,
+  Component, 
   Network,
   Sparkles,
   ScreenShare,
@@ -205,7 +204,7 @@ const open: {
   {
     title: "Svelte",
     href: "#",
-    icon: <Codepen strokeWidth={2} />,
+    icon: <Component strokeWidth={2} />,
     description: "The web's efficient Ul framework",
   },
   {
@@ -237,7 +236,7 @@ const tools: {
   {
     title: "Templates",
     href: "#",
-    icon: <Codepen strokeWidth={2} />,
+    icon: <Component strokeWidth={2} />,
     description: "Jumpstart app development",
   },
   {
