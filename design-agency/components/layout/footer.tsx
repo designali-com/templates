@@ -26,7 +26,7 @@ const resourceLinks = [
 
 export function Footer() {
   return (
-    <footer className="flex w-full flex-col pt-20">
+    <footer className="flex border-t w-full flex-col pt-20">
       {/* Main Footer */}
       <div className="max-w-5xl mx-auto flex w-full flex-col justify-between md:flex-row">
         {/* Brand */}

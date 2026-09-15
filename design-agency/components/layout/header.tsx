@@ -20,8 +20,8 @@ export const navLinks = [
         href: "/#pricing",
     },
     {
-        label: "Blogs",
-        href: "/blogs",
+        label: "Works",
+        href: "/works",
     },
 ];
 
