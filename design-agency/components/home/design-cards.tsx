@@ -1,6 +1,4 @@
 
-import Image from "next/image"
-
 import { Dithering, DotOrbit, Spiral } from "@paper-design/shaders-react"
 
 export function DesignSection() {
@@ -19,7 +17,7 @@ export function DesignSection() {
                     {/* Card 1 — Strategy */}
                     <div className="h-[430px] md:h-[460px] overflow-hidden rounded-lg border border-dashed">
                         <div className="relative h-full shadow-[inset_0_6px_6px_rgba(255,255,255,0.4),inset_0_-3px_6px_rgba(0,0,0,0.1),inset_0_-4px_8px_rgba(0,0,0,0.2)] rounded-md">
-                            <Image
+                            <img
                                 src="/stock/strategy.jpg"
                                 alt="DesignAli Strategy"
                                 width={300}
@@ -54,7 +52,7 @@ export function DesignSection() {
                     {/* Card 2 — Design */}
                     <div className="h-[430px] md:h-[460px] overflow-hidden rounded-lg border border-dashed">
                         <div className="relative h-full shadow-[inset_0_6px_6px_rgba(255,255,255,0.4),inset_0_-3px_6px_rgba(0,0,0,0.1),inset_0_-4px_8px_rgba(0,0,0,0.2)] rounded-md">
-                            <Image
+                            <img
                                 src="/stock/design.jpg"
                                 alt="DesignAli Creative Design"
                                 width={300}
@@ -88,7 +86,7 @@ export function DesignSection() {
                     {/* Card 3 — Development */}
                     <div className="h-[430px] md:h-[460px] overflow-hidden rounded-lg border border-dashed">
                         <div className="relative h-full shadow-[inset_0_6px_6px_rgba(255,255,255,0.4),inset_0_-3px_6px_rgba(0,0,0,0.1),inset_0_-4px_8px_rgba(0,0,0,0.2)] rounded-md">
-                            <Image
+                            <img
                                 src="/stock/development.jpg"
                                 alt="DesignAli Development"
                                 width={300}
