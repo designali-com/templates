@@ -4,6 +4,7 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils";
 import { Metadata } from "next";
+import { Header } from "@/components/layout/header";
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'})
 
@@ -13,7 +14,7 @@ const fontMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "designali — Design & Code",
+  title: "Ali Imam — Design & Code",
   description:
     "Where thoughtful design meets production-ready code. I design and build digital experiences that look great, feel intuitive, and work beautifully.",
   keywords: [
@@ -49,7 +50,8 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn("antialiased", fontMono.variable, "font-sans", inter.variable)}
     >
-      <body>
+      <body className="px-2 lg:px-0">
+        <Header />
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
