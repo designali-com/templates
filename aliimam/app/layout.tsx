@@ -1,16 +1,23 @@
-import { Geist, Geist_Mono, Inter } from "next/font/google"
+import { Instrument_Serif, Geist_Mono, Inter } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils";
 import { Metadata } from "next";
 import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'})
 
 const fontMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
+})
+
+const fontSerif = Instrument_Serif({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  weight: "400",
 })
 
 export const metadata: Metadata = {
@@ -48,11 +55,12 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", inter.variable)}
+      className={cn("antialiased", fontMono.variable, fontSerif.variable, "font-sans", inter.variable)}
     >
       <body className="px-2 lg:px-0">
         <Header />
         <ThemeProvider>{children}</ThemeProvider>
+        <Footer/>
       </body>
     </html>
   )
