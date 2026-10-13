@@ -4,6 +4,9 @@ import { TrustSection } from "@/components/home/trust"
 import { Clients } from "@/components/home/clients"
 import { Testimonials } from "@/components/home/testmonials"
 import { BuildWith } from "@/components/home/build-with"
+import { Summary } from "@/components/home/summary"
+import { SkillsSection } from "@/components/home/skills"
+import { FAQSection } from "@/components/home/faq"
 
 export default function Page() {
   return (
@@ -12,8 +15,11 @@ export default function Page() {
       <TrustSection />
       <GallerySection />
       <Clients /> 
+      <Summary />
+      <SkillsSection />
       <BuildWith />
       <Testimonials />
+      <FAQSection />
     </div>
   )
 }

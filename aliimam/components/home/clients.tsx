@@ -12,7 +12,7 @@ const logos = [
 export function Clients() {
     return (
         <div className="relative mx-auto w-full border-x-2 max-w-6xl border-t-0 border-dotted">
-            <h1 className="text-md text-primary border-b-2 border-dotted p-4">
+            <h1 className="text-md text-center text-primary border-b-2 border-dotted p-4">
                 Trusted by the world’s most creative companies.
             </h1>
 

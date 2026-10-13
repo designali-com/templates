@@ -11,10 +11,7 @@ import {
 export function BuildWith() {
   return (
     <div className="relative mx-auto w-full border-x-2 max-w-6xl border-t-2 py-10 border-dotted">
-      <h1 className="mb-10 px-20 text-center text-sm font-medium text-muted-foreground">
-        designed & built with
-      </h1>
-
+       
       <div className="mx-auto max-w-2xl px-6">
         <div className="flex flex-wrap items-center justify-center gap-10">
           {tools.map((tool) => {
