@@ -1,10 +1,12 @@
- 
+import ExperienceSection from "@/components/about/experience"
+import { HeroAbout } from "@/components/about/hero"
+
 export default function Page() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-         About
-      </div>
+    <div className="bg-background border-dotted border-t-2 relative flex min-h-svh flex-col">
+
+      <HeroAbout />
+      <ExperienceSection />
     </div>
   )
 }

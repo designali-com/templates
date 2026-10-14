@@ -15,16 +15,14 @@ import { ThemeSwitcher } from "./toggle-mode"
 
 export function Footer() {
   return (
-    <footer className={cn("relative max-w-6xl mx-auto border-x-2 border-dotted")}>
+    <footer className={cn("relative max-w-6xl mx-auto xl:border-x-2 border-dotted")}>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-3 p-6">
         <div className="col-span-6 flex flex-col gap-4 md:col-span-4">
           <p className="max-w-sm text-sm text-balance text-muted-foreground">
             A brand owned by designali.
-          </p>
-
+          </p> 
           <div className="flex items-center gap-1">
-            <ThemeSwitcher />
-
+            <ThemeSwitcher /> 
             {socialLinks.map((item, index) => (
               <a
                 key={`social-${item.link}-${index}`}
@@ -164,23 +162,7 @@ const componentLinks = [
   {
     href: "/blocks",
     label: "Blocks",
-  },
-  {
-    href: "/ui",
-    label: "UI Designs",
-  },
-  {
-    href: "/icons",
-    label: "Icons",
-  },
-  {
-    href: "/logos",
-    label: "Logos",
-  },
-  {
-    href: "/illustration",
-    label: "Illustration",
-  },
+  }, 
 ]
 
 /* -------------------------------- */
@@ -195,15 +177,7 @@ const companyLinks = [
   {
     href: "/docs",
     label: "Documentation",
-  },
-  {
-    href: "/blogs",
-    label: "Blogs",
-  },
-  {
-    href: "/docs/legal/terms",
-    label: "Terms",
-  },
+  }, 
 ]
 
 const designLinks = [
@@ -214,27 +188,7 @@ const designLinks = [
   {
     href: "/docs/components/number-counter",
     label: "Number Counter",
-  },
-  {
-    href: "/docs/components/gauge",
-    label: "Gauge",
-  },
-  {
-    href: "/docs/components/dot-pattern",
-    label: "Dot Pattern",
-  },
-  {
-    href: "/docs/components/grid-pattern",
-    label: "Grid Pattern",
-  },
-  {
-    href: "/docs/components/marquee",
-    label: "Marquee",
-  },
-  {
-    href: "/docs/components/typewriter",
-    label: "Typewriter",
-  },
+  }, 
 ]
 
 /* -------------------------------- */

@@ -1,4 +1,3 @@
-
 import {
     Palette,
     PenTool,
@@ -11,23 +10,46 @@ import {
     Workflow,
     Image,
     Component,
+    Bot,
+    CalendarDays,
+    Clapperboard,
+    Film,
+    Lightbulb,
+    Mic,
+    MousePointer2,
+    Package,
+    PanelsTopLeft,
+    Printer,
+    Terminal,
+    Computer,
 } from "lucide-react";
 
 const skills = [
     { name: "UI/UX Design", icon: Layout },
-    { name: "Graphic Design", icon: Palette },
-    { name: "Brand Identity", icon: Sparkles },
-    { name: "Design Systems", icon: Layers },
-    { name: "Figma", icon: Monitor },
     { name: "Web Design", icon: Monitor },
+    { name: "Brand Identity", icon: Sparkles },
+    { name: "Graphic Design", icon: Palette },
+    { name: "Design Systems", icon: Layers },
     { name: "Frontend Development", icon: Code2 },
-    { name: "React", icon: Component },
-    { name: "Next.js", icon: Workflow },
+    { name: "Creative Coding", icon: Terminal },
+    { name: "React & Next.js", icon: Component },
     { name: "Tailwind CSS", icon: Code2 },
-    { name: "Responsive Design", icon: Smartphone },
-    { name: "Visual Design", icon: PenTool },
+    { name: "Figma", icon: Computer },
+    { name: "Video & Motion", icon: Film },
+    { name: "Motion Graphics", icon: Clapperboard },
+    { name: "AI Content", icon: Bot },
     { name: "Digital Design", icon: Image },
-];
+    { name: "Product Packaging", icon: Package },
+    { name: "Print Design", icon: Printer },
+    { name: "Event Design", icon: CalendarDays },
+    { name: "Podcast Design", icon: Mic },
+    { name: "Visual Design", icon: PenTool },
+    { name: "Responsive Design", icon: Smartphone },
+    { name: "Landing Pages", icon: PanelsTopLeft },
+    { name: "Prototyping", icon: MousePointer2 },
+    { name: "Design Engineering", icon: Workflow },
+    { name: "Creative Direction", icon: Lightbulb },
+  ];
 
 export function SkillsSection() {
     return (
@@ -44,7 +66,7 @@ export function SkillsSection() {
                         return (
                             <div
                                 key={skill.name}
-                                className="flex items-center gap-2.5 border px-4 py-3 transition-colors hover:bg-foreground hover:text-background"
+                                className="flex items-center gap-2.5 border px-4 py-3"
                             >
                                 <Icon className="h-4 w-4 shrink-0 text-muted-foreground" />
 

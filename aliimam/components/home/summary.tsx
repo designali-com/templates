@@ -1,13 +1,4 @@
-const logos = [
-    { name: "JKtype", image: "/logos/c3-2.png" },
-    { name: "LG", image: "/logos/c10-2.png" },
-    { name: "TeaValley", image: "/logos/c5-2.png" },
-    { name: "Apollo", image: "/logos/c4-2.png" },
-    { name: "DB", image: "/logos/c18-2.png" },
-    { name: "SC", image: "/logos/c8-2.png" },
-    { name: "PB", image: "/logos/c1-2.png" },
-    { name: "TV", image: "/logos/c2-2.png" },
-]
+ 
 
 export function Summary() {
     return (

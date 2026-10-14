@@ -14,14 +14,12 @@ export function Header() {
             <nav
                 className={cn(
                     "flex h-14 w-full items-center justify-between px-2 md:h-12 md:transition-all md:ease-out",
-                    
-                )}
-
+                )} 
             >
                 <div className="flex items-center gap-1">
                     <Button
                         size="sm"
-                        render={<Link href={""} />}
+                        render={<Link href={"/works"} />}
                         nativeButton={false}
                     >
                         Works
@@ -29,7 +27,7 @@ export function Header() {
                     <Button
                         size="sm"
                         variant="outline"
-                        render={<Link href={""} />}
+                        render={<Link href={"/about"} />}
                         nativeButton={false}
                     >
                         About

@@ -12,87 +12,87 @@ export function FAQSection() {
   const faqItems = [
     {
       id: "item-1",
-      question: "What is Designali?",
+      question: "Who is Ali Imam?",
       answer:
-        "Designali is a design studio that helps businesses, startups, and creators get high-quality design without the overhead of hiring a full-time designer.",
+        "Ali Imam is a Design Engineer and Head of Design with 9+ years of experience in UI/UX design, branding, visual design, and frontend development. He combines design thinking with code to create meaningful digital experiences.",
     },
     {
       id: "item-2",
-      question: "What kind of design work do you offer?",
+      question: "What services do you offer?",
       answer:
-        "Designali covers a wide range of digital design, including branding, websites, UI/UX, social media creatives, presentations, marketing materials, and other visual design needs.",
+        "I offer UI/UX design, website design and development, branding, design systems, graphic design, landing pages, dashboards, and digital experiences for startups, SaaS companies, and growing businesses.",
     },
     {
       id: "item-3",
-      question: "Who will be working on my designs?",
+      question: "What makes your approach different?",
       answer:
-        "You’ll work directly with Ali, the designer behind Designali. Every project is personally designed and reviewed to maintain quality and consistency.",
+        "I combine design and development to turn ideas into polished, functional digital products. My focus is on thoughtful details, usability, visual consistency, and clean implementation.",
     },
     {
       id: "item-4",
-      question: "How quickly will my design be delivered?",
+      question: "How much experience do you have?",
       answer:
-        "Most design requests are delivered within 24–48 hours. More complex projects may take longer depending on the scope and level of detail required.",
+        "I have 9+ years of experience working across design studios, product companies, and independent client projects, covering everything from branding and visual identity to digital products and frontend development.",
     },
     {
       id: "item-5",
-      question: "Can I request multiple designs?",
+      question: "What technologies do you work with?",
       answer:
-        "Yes. You can submit as many design requests as you need. Requests are handled based on the active queue and your selected plan.",
+        "I work with React, Next.js, TypeScript, Tailwind CSS, and modern UI libraries to build responsive, high-quality web experiences. My workflow combines Figma-based design with practical frontend implementation.",
     },
     {
       id: "item-6",
-      question: "Are revisions included?",
+      question: "Do you offer both design and development?",
       answer:
-        "Yes. Revisions are included in the service. The goal is to refine each design until it matches your requirements and feels right for your brand.",
+        "Yes. I can take a project from initial concepts and UI/UX design to frontend implementation, helping maintain consistency between the original design and the final product.",
     },
     {
       id: "item-7",
-      question: "How do I submit a design request?",
+      question: "Who do you work with?",
       answer:
-        "Simply share your brief, references, content, or ideas through your preferred communication channel. You can also share Figma files, documents, screenshots, or Loom videos when needed.",
+        "I work with founders, startups, agencies, product teams, and businesses looking for thoughtful design and reliable digital execution.",
     },
     {
       id: "item-8",
-      question: "How do we communicate?",
+      question: "Can you work with an existing design system?",
       answer:
-        "Communication is simple and direct. You can share feedback, ideas, and updates through WhatsApp, email, or the tools you already use.",
+        "Absolutely. I can work with your existing design system, improve its components, establish consistent design patterns, and make it easier to scale across your product.",
     },
     {
       id: "item-9",
-      question: "Can you work with my existing brand?",
+      question: "Do you create custom websites?",
       answer:
-        "Absolutely. Designali can work within your existing brand guidelines, or help improve and evolve your visual identity when needed.",
+        "Yes. I design and build custom websites tailored to your brand, goals, and audience, with a focus on responsive layouts, performance, accessibility, and attention to detail.",
     },
     {
       id: "item-10",
-      question: "Do you work with startups and small businesses?",
+      question: "Do you work on open-source projects?",
       answer:
-        "Yes. Designali is built for startups, businesses, founders, agencies, and creators who need reliable design support without hiring a full-time designer.",
+        "Yes. I build and share reusable UI components, design resources, and developer tools through Designali to help designers and developers create better digital products.",
     },
     {
       id: "item-11",
-      question: "Can you handle large design projects?",
+      question: "Can I hire you for a freelance project?",
       answer:
-        "Yes. Larger projects can be broken into smaller milestones and delivered in phases to keep the process organised, efficient, and easy to review.",
+        "Yes. I'm open to discussing freelance projects, collaborations, and selected opportunities that align with my expertise. Share your requirements, timeline, and goals to get started.",
     },
     {
       id: "item-12",
-      question: "Can I pause or cancel my subscription?",
+      question: "How do you approach a new project?",
       answer:
-        "Yes. The subscription is flexible. You can pause or cancel based on your needs without being locked into a long-term commitment.",
+        "I start by understanding your goals, audience, and requirements. From there, I define the direction, explore ideas, design the experience, and refine the details before moving into development when needed.",
     },
     {
       id: "item-13",
-      question: "How do I get started with Designali?",
+      question: "How can I work with you?",
       answer:
-        "Getting started is simple. Choose a plan or book a call to discuss your requirements, and we’ll take it from there.",
+        "You can reach out through my contact page or connect with me on LinkedIn to discuss your project, collaboration, or business requirements.",
     },
-  ]
+  ];
 
   return (
     <section className="relative px-3 md:px-0">
-      <div className="mb-1 border-2 border-t-0 border-dotted">
+      <div className="mb-1 border-y-2 border-t-0 border-dotted">
         <div className="mx-auto w-full max-w-6xl border-dotted lg:border-x-2">
           <h1 className="text-md text-center text-primary border-b-2 border-dotted p-4">
             Frequently Asked Questions

@@ -6,8 +6,9 @@ import { cn } from "@/lib/utils";
 import { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { CanvasRuler } from "@/components/ui/canvas-ruler";
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'})
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 
 const fontMono = Geist_Mono({
   subsets: ["latin"],
@@ -57,10 +58,14 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn("antialiased", fontMono.variable, fontSerif.variable, "font-sans", inter.variable)}
     >
-      <body className="px-2 lg:px-0">
-        <Header />
-        <ThemeProvider>{children}</ThemeProvider>
-        <Footer/>
+      <body className="w-full overflow-x-hidden"> 
+        <ThemeProvider>
+          <CanvasRuler >
+            <Header />
+            {children}
+            <Footer />
+          </CanvasRuler>
+        </ThemeProvider> 
       </body>
     </html>
   )
