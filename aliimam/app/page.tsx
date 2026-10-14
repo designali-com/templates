@@ -7,6 +7,7 @@ import { BuildWith } from "@/components/home/build-with"
 import { Summary } from "@/components/home/summary"
 import { SkillsSection } from "@/components/home/skills"
 import { FAQSection } from "@/components/home/faq"
+import { CalMeeting } from "@/components/home/cal-meeting"
 
 export default function Page() {
   return (
@@ -20,6 +21,7 @@ export default function Page() {
       <BuildWith />
       <Testimonials />
       <FAQSection />
+      <CalMeeting />
     </div>
   )
 }

@@ -130,7 +130,7 @@ export function CanvasRuler({ children, className = "" }: CanvasRulerProps) {
 
             <div className="relative flex flex-1 w-full min-h-0">
 
-                <div className="sticky left-0 z-20 w-5 shrink-0 backdrop-blur-sm self-stretch">
+                <div className="hidden md:block md:sticky left-0 z-20 w-5 shrink-0 backdrop-blur-sm self-stretch">
                     <svg className="absolute top-0 border-r border-primary/20 left-0 w-full h-full" aria-hidden="true">
                         {Array.from(
                             { length: Math.ceil(dimensions.height / step) + 1 },

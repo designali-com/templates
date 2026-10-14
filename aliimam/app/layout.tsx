@@ -60,7 +60,7 @@ export default function RootLayout({
     >
       <body className="w-full overflow-x-hidden"> 
         <ThemeProvider>
-          <CanvasRuler >
+          <CanvasRuler>
             <Header />
             {children}
             <Footer />
