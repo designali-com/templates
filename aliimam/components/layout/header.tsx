@@ -5,6 +5,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils"; 
 
 import { Button } from "@/components/ui/button";
+import { ModeSwitcher } from "./toggle-mode";
  
 export function Header() {
     
@@ -36,14 +37,15 @@ export function Header() {
                 </div>
                 <Link
                     href="/"
-                    className="ml-2 font-medium flex items-center gap-2"
+                    className="ml-2 hover:text-primary transition-all duration-300 font-medium flex items-center gap-2"
                     aria-label="Designali"
                 >
                     Ali Imam
                 </Link>
 
                 <div className="hidden items-center gap-2 md:flex">
-                    <Button size="sm" 
+                    <ModeSwitcher />
+                    <Button nativeButton={false} size="sm" 
                     render={<Link target="_blank" href="https://cal.com/aliimam/30min" />}>
                         Let's Talk 
                     </Button>

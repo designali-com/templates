@@ -20,7 +20,7 @@ export function Hero() {
                     </h1>
 
                     <div className="flex items-start w-full gap-1">
-                        <Button render={<Link target="_blank" href="https://cal.com/aliimam/30min" />}>
+                        <Button nativeButton={false} render={<Link target="_blank" href="https://cal.com/aliimam/30min" />}>
                             Start Project with Me
                         </Button>
                     </div>

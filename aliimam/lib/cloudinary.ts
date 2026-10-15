@@ -18,3 +18,14 @@ export async function getAllCreativeImages() {
 
     return result.resources;
 }
+
+export async function getAllWorkImages() {
+    const result = await cloudinary.search
+        .expression('asset_folder:"creatives/creative/*" AND resource_type:image')
+        .sort_by("created_at", "desc")
+        .max_results(500)
+        .execute();
+
+    return result.resources;
+}
+

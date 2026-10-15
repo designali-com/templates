@@ -21,21 +21,22 @@ export function Footer() {
         <div className="col-span-6 flex flex-col gap-4 md:col-span-4">
           <p className="max-w-sm text-sm text-balance text-muted-foreground">
             A brand owned by Ali Imam.
-          </p> 
+          </p>
           <div className="flex items-center gap-1">
-            <ThemeSwitcher /> 
+            <ThemeSwitcher />
             {socialLinks.map((item, index) => (
-              <a
-                key={`social-${item.link}-${index}`}
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`${item.name} social media`}
-              >
-                <Button size="icon-lg" variant="ghost">
-                  {item.icon}
-                </Button>
-              </a>
+              <Button
+                nativeButton={false}
+               key={`social-${item.link}-${index}`} size="icon-lg" variant="ghost"
+                render={<a 
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${item.name} social media`}
+                />}> 
+                {item.icon}
+              </Button>
+
             ))}
           </div>
           <a href="mailto:hello@designali.com" className="text-sm hover:underline hover:text-primary">
@@ -163,7 +164,7 @@ const componentLinks = [
   {
     href: "https://designali.com/blocks",
     label: "Blocks",
-  }, 
+  },
 ]
 
 /* -------------------------------- */
@@ -178,7 +179,7 @@ const companyLinks = [
   {
     href: "/works",
     label: "Works",
-  }, 
+  },
 ]
 
 const designLinks = [
@@ -189,7 +190,7 @@ const designLinks = [
   {
     href: "https://designali.com/tools/gradient",
     label: "Gradient Tool",
-  }, 
+  },
 ]
 
 /* -------------------------------- */

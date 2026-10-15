@@ -14,13 +14,15 @@ import {
 import { LiveWebExamples } from "./web-showcase";
 import { FigmaShowcase } from "./figma-showcase";
 import { Reels, Videos } from "./videos";
+import { GridMain } from "./grid-main";
 
 type WorksTabsProps = {
   creativesContent: ReactNode;
+  allWorksContent: ReactNode
 };
 
 // Internal component reading dynamic URL search params
-function WorksTabsContent({ creativesContent }: WorksTabsProps) {
+function WorksTabsContent({ creativesContent, allWorksContent }: WorksTabsProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const currentTab = searchParams.get("tab") || "all";
@@ -48,16 +50,17 @@ function WorksTabsContent({ creativesContent }: WorksTabsProps) {
         </TabsList>
       </div>
 
-      <TabsContent value="all" className="mb-2 w-full">
-        <div className="h-screen w-full">
-          <h1 className="mb-2 py-10 text-center font-serif text-5xl">
+      <TabsContent value="all" className="w-full">
+        <div className="w-full">
+          <h1 className="border-b-2 border-dotted py-10 text-center font-serif text-5xl">
             Works Showcase
           </h1>
+          {allWorksContent}
         </div>
       </TabsContent>
 
       <TabsContent value="web" className="w-full">
-        <div className="border-b-2 border-dotted w-full">
+        <div className="w-full">
           <h1 className="border-b-2 border-dotted py-10 text-center font-serif text-5xl">
             Live Web Examples
           </h1>
@@ -83,7 +86,7 @@ function WorksTabsContent({ creativesContent }: WorksTabsProps) {
       </TabsContent>
 
       <TabsContent value="graphic" className="w-full">
-        <div className="border-b-2 border-dotted w-full">
+        <div className="w-full">
           <h1 className="border-b-2 border-dotted py-10 text-center font-serif text-5xl">
             Graphic Design
           </h1>
@@ -92,7 +95,7 @@ function WorksTabsContent({ creativesContent }: WorksTabsProps) {
       </TabsContent>
 
       <TabsContent value="videos" className="w-full">
-        <div className="border-b-2 border-dotted w-full">
+        <div className="w-full">
           <h1 className="border-b-2 border-dotted py-10 text-center font-serif text-5xl">
             Videos & Reels
           </h1>

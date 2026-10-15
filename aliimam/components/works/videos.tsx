@@ -85,7 +85,7 @@ const reelVideos = [
 
 export function Reels() {
     return (
-        <main className="w-full max-w-6xl mx-auto xl:border-x-2 border-dotted px-2">
+        <main className="w-full pb-2 max-w-6xl mx-auto xl:border-x-2 border-dotted px-2">
             <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
                 {reelVideos.map((src) => (
                     <VideoCard key={src} src={src} />
@@ -97,8 +97,11 @@ export function Reels() {
 
 /* -------------------------------- Videos ------------------------------- */
 
-const featuredVideo =
-    "https://res.cloudinary.com/deelfmnhg/video/upload/v1726043923/IDCUBE_Video_2_oii2ve.mp4";
+const featuredVideo = [
+    "https://res.cloudinary.com/deelfmnhg/video/upload/v1726043923/IDCUBE_Video_2_oii2ve.mp4",
+    "https://res.cloudinary.com/drtoahmaa/video/upload/v1792047051/creatives/videos/Predict_Launch_Video_nzzr48.mp4"
+
+]
 
 const twoColumnVideos = [
     "https://res.cloudinary.com/deelfmnhg/video/upload/v1725607099/3_likg2t_n4xlwz.mp4",
@@ -165,11 +168,10 @@ export function Videos() {
     return (
         <main className="w-full max-w-6xl pt-2 mx-auto xl:border-x-2 border-dotted px-2">
             {/* Featured video */}
-            <div className="mb-2">
-                <VideoCard
-                    src={featuredVideo}
-                    className=""
-                />
+            <div className="mb-2 grid gap-2">
+                {featuredVideo.map((src) => (
+                    <VideoCard key={src} src={src} />
+                ))}
             </div>
 
             {/* Two-column videos */}

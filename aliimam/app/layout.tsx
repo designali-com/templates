@@ -7,6 +7,7 @@ import { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { CanvasRuler } from "@/components/ui/canvas-ruler";
+import NowPlaying from "@/components/layout/now-playing";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 
@@ -65,6 +66,7 @@ export default function RootLayout({
             {children}
             <Footer />
           </CanvasRuler>
+          <NowPlaying/>
         </ThemeProvider> 
       </body>
     </html>

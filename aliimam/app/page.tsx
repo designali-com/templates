@@ -8,6 +8,7 @@ import { Summary } from "@/components/home/summary"
 import { SkillsSection } from "@/components/home/skills"
 import { FAQSection } from "@/components/home/faq"
 import { CalMeeting } from "@/components/home/cal-meeting"
+import { Story } from "@/components/about/story"
 
 export default function Page() {
   return (
@@ -20,6 +21,7 @@ export default function Page() {
       <SkillsSection />
       <BuildWith />
       <Testimonials />
+      <Story />
       <FAQSection />
       <CalMeeting />
     </div>
