@@ -117,7 +117,7 @@ export default function ExperienceSection() {
                                 <img
                                     src={experience.logo}
                                     alt={`${experience.company} logo`}
-                                    className="object-contain w-20 h-full p-2"
+                                    className="object-contain invert grayscale w-20 h-full p-2"
                                 />
                             </div>
 
@@ -141,13 +141,13 @@ export default function ExperienceSection() {
                             Where I stand
                         </h2>
 
-                        <p className=" text-base md:text-lg leading-relaxed font-normal">
+                        <p className=" text-muted-foreground text-base md:text-lg leading-relaxed font-normal">
                             For 6+ years I&apos;ve been collaborating with dynamic tech founders, teams
                             shaping tomorrow, from independent builders to design-driven SMBs across
                             Fintech, DevTools, Web3, and SaaS.
                         </p>
 
-                        <p className="text-base md:text-lg leading-relaxed font-normal">
+                        <p className=" text-muted-foreground text-base md:text-lg leading-relaxed font-normal">
                             My mission is to make founders more competitive through design. I craft
                             identities, websites, and visual systems that people respond to, earning trust
                             with investors, opening doors to partnerships, and turning good products into

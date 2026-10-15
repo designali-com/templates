@@ -1,18 +1,12 @@
-import { Suspense } from "react";
 import { WorksTabs } from "@/components/works/tabs-works";
+import {
+  Creatives,
+} from "@/components/works/creatives";
 
-export default function Page() {
+export default function WorksPage() {
   return (
-    <div className="bg-background border-dotted border-t-2 relative flex justify-center items-center min-h-svh flex-col">
-      <Suspense
-        fallback={
-          <div className="w-full min-h-svh flex items-center justify-center">
-            Loading works...
-          </div>
-        }
-      >
-        <WorksTabs />
-      </Suspense>
-    </div>
+    <WorksTabs
+      creativesContent={<Creatives />}
+    />
   );
 }

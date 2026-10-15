@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 
 import {
   ClaudeAI,
+  GitHub,
   Grok,
   Instagram,
   LinkedIn,
@@ -19,7 +20,7 @@ export function Footer() {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-3 p-6">
         <div className="col-span-6 flex flex-col gap-4 md:col-span-4">
           <p className="max-w-sm text-sm text-balance text-muted-foreground">
-            A brand owned by designali.
+            A brand owned by Ali Imam.
           </p> 
           <div className="flex items-center gap-1">
             <ThemeSwitcher /> 
@@ -83,7 +84,7 @@ export function Footer() {
         </div>
 
         <div className="col-span-3 w-full md:col-span-1">
-          <span className="text-xs text-muted-foreground">Company</span>
+          <span className="text-xs text-muted-foreground">AI</span>
 
           <div className="mt-2 flex flex-col gap-2">
             {companyLinks.map(({ href, label }) => (
@@ -104,7 +105,7 @@ export function Footer() {
 
         <div className="col-span-3 w-full md:col-span-1">
           <span className="text-xs text-muted-foreground">
-            Ask AI about designali
+            Ask AI about Ali Imam
           </span>
 
           <div className="mt-2 flex gap-2">
@@ -156,11 +157,11 @@ export function Footer() {
 
 const componentLinks = [
   {
-    href: "/templates",
-    label: "Templates",
+    href: "https://designali.com",
+    label: "Designali",
   },
   {
-    href: "/blocks",
+    href: "https://designali.com/blocks",
     label: "Blocks",
   }, 
 ]
@@ -171,23 +172,23 @@ const componentLinks = [
 
 const companyLinks = [
   {
-    href: "/pricing",
-    label: "Pricing",
+    href: "/about",
+    label: "About",
   },
   {
-    href: "/docs",
-    label: "Documentation",
+    href: "/works",
+    label: "Works",
   }, 
 ]
 
 const designLinks = [
   {
-    href: "/docs/components/bento",
-    label: "Bento",
+    href: "https://designali.com/docs/",
+    label: "Components",
   },
   {
-    href: "/docs/components/number-counter",
-    label: "Number Counter",
+    href: "https://designali.com/tools/gradient",
+    label: "Gradient Tool",
   }, 
 ]
 
@@ -210,6 +211,11 @@ const socialLinks = [
     name: "LinkedIn",
     icon: <LinkedIn />,
     link: "https://www.linkedin.com/company/designali-com",
+  },
+  {
+    name: "GitHub",
+    icon: <GitHub />,
+    link: "https://github.com/designali-com",
   },
 ]
 

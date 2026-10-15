@@ -197,6 +197,45 @@ export function CanvasRuler({ children, className = "" }: CanvasRulerProps) {
                         </>
                     )}
                 </div>
+
+                <div className="hidden md:block md:sticky right-0 z-20 w-5 shrink-0 backdrop-blur-sm self-stretch">
+                    <svg className="absolute top-0 border-l border-primary/20 right-0 w-full h-full" aria-hidden="true">
+                        {Array.from(
+                            { length: Math.ceil(dimensions.height / step) + 1 },
+                            (_, i) => {
+                                const y = i * step;
+                                const major = y % majorStep === 0;
+
+                                return (
+                                    <g key={y}>
+
+                                        <line
+                                            x1="0"
+                                            y1={y}
+                                            x2={major ? 12 : 4}
+                                            y2={y}
+                                            stroke="currentColor"
+                                            strokeOpacity={0.1}
+                                        />
+
+                                        {major && (
+                                            <text
+                                                x={2}
+                                                y={y + 2}
+                                                fontSize="8"
+                                                fill="currentColor"
+                                                className="select-none text-right text-primary font-sans"
+                                                transform={`rotate(-90 3 ${y - 9})`}
+                                            >
+                                                {y}
+                                            </text>
+                                        )}
+                                    </g>
+                                );
+                            }
+                        )}
+                    </svg>
+                </div>
             </div>
         </div>
     );

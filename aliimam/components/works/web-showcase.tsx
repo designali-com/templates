@@ -28,7 +28,7 @@ const examples = [
 
 export function LiveWebExamples() {
   return (
-    <section className="w-full">
+    <section className="w-full py-2">
       <div className="grid w-full grid-cols-1 gap-2 px-2 md:grid-cols-2">
         {examples.map((example) => (
           <WebsitePreview key={example.title} {...example} />

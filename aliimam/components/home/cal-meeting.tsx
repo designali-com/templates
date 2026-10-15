@@ -8,7 +8,7 @@ export function CalMeeting() {
     useEffect(() => {
         (async function () {
             const cal = await getCalApi({ "namespace": "designali" });
-            cal("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+            cal("ui", { "cssVarsPerTheme": { "light": { "cal-brand": "#00A8FF" }, "dark": { "cal-brand": "#00A8FF" } }, "hideEventTypeDetails": false, "layout": "month_view" });
         })();
     }, [])
     return (
@@ -18,11 +18,13 @@ export function CalMeeting() {
                     Book a Meeting
                 </h1>
             </div>
-            <div className="w-full h-full max-w-6xl mx-auto bg-background p-6 border-dotted border-x-2">
-            <Cal namespace="designali" 
-                calLink="designali-com/designali"  
-                config={{ "layout": "month_view", "useSlotsViewOnSmallScreen": "true" }}
-            />
+            <div className="flex justify-center lg:border-x-2 border-dotted max-w-6xl mx-auto items-center">
+            <div className="w-full h-full max-w-4xl mx-auto bg-background p-6 border-dotted lg:border-x-2">
+                <Cal namespace="designali"
+                    calLink="designali-com/designali"
+                    config={{ "layout": "month_view", "useSlotsViewOnSmallScreen": "true" }}
+                />
+            </div>
             </div>
         </section>
     )

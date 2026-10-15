@@ -99,7 +99,7 @@ export function FAQSection() {
           </h1>
           <Accordion
             defaultValue={["item-4"]}
-            className="-mb-1 max-w-3xl mx-auto border-x-2 border-dotted"
+            className="-mb-1 max-w-4xl mx-auto border-x-2 border-dotted"
           >
             {faqItems.map((item) => (
               <AccordionItem
