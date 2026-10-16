@@ -180,6 +180,10 @@ const companyLinks = [
     href: "/works",
     label: "Works",
   },
+  {
+    href: "/story",
+    label: "Story",
+  },
 ]
 
 const designLinks = [

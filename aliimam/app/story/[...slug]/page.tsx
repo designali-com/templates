@@ -2,7 +2,8 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 
 import { storySource } from "@/lib/source"
-import { StoryCard } from "@/components/story/story"
+import { StoryCardDesign } from "@/components/story/story"
+import { ButtonStory } from "@/components/story/button-story"
 
 export const revalidate = false
 export const dynamic = "force-static"
@@ -41,12 +42,7 @@ interface PageProps {
   }>
 }
 
-async function getDocFromParams({
-  params,
-}: PageProps): Promise<{
-  doc: ShowcasePage["data"]
-  page: ShowcasePage
-}> {
+async function getDocFromParams({ params }: PageProps) {
   const { slug } = await params
 
   const page = storySource.getPage(slug) as ShowcasePage | null
@@ -61,9 +57,21 @@ async function getDocFromParams({
     notFound()
   }
 
+  // Get all pages to calculate previous and next stories
+  const pages = storySource.getPages() as ShowcasePage[]
+  const currentIndex = pages.findIndex((p) => p.url === page.url)
+
+  const previousPage = currentIndex > 0 ? pages[currentIndex - 1] : null
+  const nextPage =
+    currentIndex !== -1 && currentIndex < pages.length - 1
+      ? pages[currentIndex + 1]
+      : null
+
   return {
     doc,
     page,
+    previousPage,
+    nextPage,
   }
 }
 
@@ -106,32 +114,39 @@ export async function generateMetadata({
 }
 
 export default async function ShowcasePage({ params }: PageProps) {
-  const { doc, page } = await getDocFromParams({ params })
+  const { doc, previousPage, nextPage } = await getDocFromParams({ params })
 
-  const MDXContent = page.data.body
+  const MDXContent = doc.body
 
   return (
     <main className="border-b-2 border-dotted">
-
       <header className="border-y-2 border-dotted">
-        <div className="container mx-auto max-w-6xl px-6 py-10 text-center">
+        <div className="flex justify-center w-full p-2">
+          <ButtonStory
+            className="w-full max-w-6xl px-4"
+            backHref="/story"     
+            previousHref={previousPage?.url}
+            nextHref={nextPage?.url}
+          />
+        </div>
+        <div className="mx-auto max-w-6xl px-6 py-10 text-center">
           {doc.affiliation && (
             <p className="mb-5 text-sm font-medium uppercase tracking-widest text-muted-foreground">
               {doc.affiliation}
             </p>
           )}
 
-          <h1 className="text-balance text-5xl font-serif tracking-tight md:text-6xl lg:text-7xl">
+          <h1 className="text-5xl font-serif tracking-tight md:text-6xl lg:text-7xl">
             {doc.title}
           </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-balance text-lg leading-8 text-muted-foreground md:text-xl">
+          <p className="mx-auto mt-6 max-w-2xl text-balance text-md text-muted-foreground md:text-lg">
             {doc.description}
           </p>
         </div>
       </header>
       <div className="mx-auto max-w-6xl p-2 pb-0 border-x-2 border-dotted">
-        <StoryCard title={doc.title} href={page.url} image={doc.image ?? ""} affiliation={doc.affiliation ?? ""} />
+        <StoryCardDesign image={doc.image ?? ""} />
         <article className="p-4 pt-10 max-w-2xl mx-auto border-x-2 border-dotted">
           {MDXContent ? (
             <div
@@ -182,6 +197,14 @@ export default async function ShowcasePage({ params }: PageProps) {
             </div>
           )}
         </article>
+        <div className="flex border-t-2 border-x-2 mx-auto max-w-2xl border-dotted justify-center w-full p-2">
+          <ButtonStory
+            className="w-full max-w-6xl px-4"
+            backHref="/story"     
+            previousHref={previousPage?.url}
+            nextHref={nextPage?.url}
+          />
+        </div>
       </div>
     </main>
   )

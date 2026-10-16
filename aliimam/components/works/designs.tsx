@@ -82,10 +82,7 @@ export function Designs({ images }: DesignsProps) {
 
                 <h2 className="max-w-2xl text-4xl font-serif md:text-6xl lg:text-7xl">
                 Selected Works.
-                </h2>
-                <Button nativeButton={false} render={<Link href="/works?tab=graphic">View All</Link>}>
-                    View All Designs
-                </Button>
+                </h2> 
             </div>
 
             {/* Scattered Draggable Images */}

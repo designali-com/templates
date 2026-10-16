@@ -37,3 +37,23 @@ export function StoryCard({
     </Link>
   )
 }
+
+interface StoryCardDesignProps {
+  image: string
+}
+
+export function StoryCardDesign({ 
+  image, 
+}: StoryCardDesignProps) {
+  return (
+    <div className="relative border" >
+      <img
+        src={image}
+        alt={"aliimam"}
+        width={600}
+        height={300}
+        className="h-full w-full object-contain"
+      /> 
+    </div>
+  )
+}

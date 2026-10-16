@@ -79,7 +79,7 @@ function WorksTabsContent({ creativesContent, allWorksContent }: WorksTabsProps)
 
       <TabsContent value="branding" className="w-full">
         <div className="min-h-screen w-full">
-          <h1 className="mb-2 py-10 text-center font-serif text-5xl">
+          <h1 className="mb-2 py-10 flex items-center justify-center text-center font-serif text-5xl">
             Branding
           </h1>
         </div>
@@ -110,7 +110,7 @@ function WorksTabsContent({ creativesContent, allWorksContent }: WorksTabsProps)
 // Fallback skeleton loader while reading URL parameters
 function WorksTabsFallback() {
   return (
-    <div className="flex w-full flex-col items-center justify-center border-t-2 border-dotted animate-pulse">
+    <div className="flex w-full h-screen flex-col items-center justify-center border-t-2 border-dotted animate-pulse">
       <div className="sticky top-10 z-50 mx-auto flex w-full max-w-6xl items-center justify-center pt-2">
         <div className="h-10 w-96 rounded-md bg-muted/50" />
       </div>

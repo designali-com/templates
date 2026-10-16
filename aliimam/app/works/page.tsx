@@ -6,7 +6,7 @@ import { GridMain } from "@/components/works/grid-main";
 export default function WorksPage() {
   return (
     <main className="border-b-2 border-dotted">
-      <Suspense fallback={<div className="min-h-screen w-full animate-pulse bg-muted/20" />}>
+      <Suspense fallback={<div className="h-screen w-full animate-pulse bg-muted/20" />}>
         <WorksTabs 
         creativesContent={<Creatives />} 
         allWorksContent={<GridMain />}/>
