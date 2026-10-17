@@ -1,7 +1,7 @@
 "use client";
 
 import { Suspense } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import type { ReactNode } from "react";
 
 import {
@@ -13,31 +13,52 @@ import {
 
 import { LiveWebExamples } from "./web-showcase";
 import { FigmaShowcase } from "./figma-showcase";
-import { Reels, Videos } from "./videos";
-import { GridMain } from "./grid-main";
+import { Reels, Videos } from "./videos"; 
 
 type WorksTabsProps = {
   creativesContent: ReactNode;
-  allWorksContent: ReactNode
+  allWorksContent: ReactNode;
 };
 
-// Internal component reading dynamic URL search params
-function WorksTabsContent({ creativesContent, allWorksContent }: WorksTabsProps) {
-  const router = useRouter();
+function WorksTabsContent({
+  creativesContent,
+  allWorksContent,
+}: WorksTabsProps) {
   const searchParams = useSearchParams();
-  const currentTab = searchParams.get("tab") || "all";
+
+  const validTabs = [
+    "all",
+    "web",
+    "figma",
+    "branding",
+    "graphic",
+    "videos",
+  ];
+
+  const tabParam = searchParams.get("tab");
+  const currentTab = validTabs.includes(tabParam ?? "")
+    ? tabParam!
+    : "all";
 
   const handleTabChange = (value: string) => {
-    router.push(`?tab=${value}`, { scroll: false });
+    const params = new URLSearchParams(window.location.search);
+    params.set("tab", value);
+
+    // URL update without router navigation
+    window.history.replaceState(
+      null,
+      "",
+      `${window.location.pathname}?${params.toString()}${window.location.hash}`,
+    );
   };
 
   return (
     <Tabs
       value={currentTab}
       onValueChange={handleTabChange}
-      className="flex border-t-2 border-dotted w-full flex-col items-center justify-center"
+      className="flex w-full flex-col items-center justify-center border-t-2 border-dotted"
     >
-      <div className="sticky top-10 pt-2 z-50 w-full flex justify-center items-center max-w-6xl mx-auto">
+      <div className="sticky top-10 z-50 mx-auto flex w-full max-w-6xl items-center justify-center pt-2">
         <TabsList className="flex h-full w-auto max-w-max whitespace-nowrap md:w-full">
           <div className="flex h-full w-full max-w-xs overflow-x-auto whitespace-nowrap p-[0.5px] scrollbar-none md:max-w-full">
             <TabsTrigger value="all">All Works</TabsTrigger>
@@ -79,7 +100,7 @@ function WorksTabsContent({ creativesContent, allWorksContent }: WorksTabsProps)
 
       <TabsContent value="branding" className="w-full">
         <div className="min-h-screen w-full">
-          <h1 className="mb-2 py-10 flex items-center justify-center text-center font-serif text-5xl">
+          <h1 className="mb-2 flex items-center justify-center py-10 text-center font-serif text-5xl">
             Branding
           </h1>
         </div>
@@ -107,11 +128,10 @@ function WorksTabsContent({ creativesContent, allWorksContent }: WorksTabsProps)
   );
 }
 
-// Fallback skeleton loader while reading URL parameters
 function WorksTabsFallback() {
   return (
-    <div className="flex w-full h-screen flex-col items-center justify-center border-t-2 border-dotted animate-pulse">
-      <div className="sticky top-10 z-50 mx-auto flex w-full max-w-6xl items-center justify-center pt-2">
+    <div className="flex h-screen w-full animate-pulse flex-col items-center justify-center border-t-2 border-dotted">
+      <div className="sticky top-10 mx-auto flex w-full max-w-6xl items-center justify-center pt-2">
         <div className="h-10 w-96 rounded-md bg-muted/50" />
       </div>
       <div className="w-full py-10 text-center">
@@ -121,11 +141,10 @@ function WorksTabsFallback() {
   );
 }
 
-// Public wrapped export ensuring dynamic sub-tree client rendering
 export function WorksTabs(props: WorksTabsProps) {
   return (
     <Suspense fallback={<WorksTabsFallback />}>
       <WorksTabsContent {...props} />
     </Suspense>
   );
-}
+} 

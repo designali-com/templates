@@ -27,13 +27,47 @@ const examples = [
 ];
 
 export function LiveWebExamples() {
+  // Initially sirf 4 items dikhane ke liye state
+  const [visibleCount, setVisibleCount] = useState(4);
+  const loadMoreRef = useRef<HTMLDivElement>(null);
+
+  // Intersection Observer jo check karega ki user page ke ant me pahunch raha hai ya nahi
+  useEffect(() => {
+    const currentRef = loadMoreRef.current;
+    if (!currentRef) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          // Jab user scroll karke niche pahunchega, toh 4 aur items badh jayenge
+          setVisibleCount((prevCount) => Math.min(prevCount + 4, examples.length));
+        }
+      },
+      {
+        rootMargin: "200px", // thoda pehle hi load karna shuru kar dega
+      }
+    );
+
+    observer.observe(currentRef);
+    return () => {
+      if (currentRef) observer.unobserve(currentRef);
+    };
+  }, []);
+
   return (
     <section className="w-full py-2">
       <div className="grid w-full grid-cols-1 gap-2 px-2 md:grid-cols-2">
-        {examples.map((example) => (
+        {examples.slice(0, visibleCount).map((example) => (
           <WebsitePreview key={example.title} {...example} />
         ))}
       </div>
+
+      {/* Ye div trigger karega jab aap scroll karke niche aayenge */}
+      {visibleCount < examples.length && (
+        <div ref={loadMoreRef} className="flex w-full items-center justify-center py-6">
+          <Loader2Icon className="h-6 w-6 animate-spin text-muted-foreground" />
+        </div>
+      )}
     </section>
   );
 }
@@ -48,7 +82,7 @@ function WebsitePreview({
   const containerRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(0);
   const [shouldLoad, setShouldLoad] = useState(false);
-  const [isLoading, setIsLoading] = useState(true); // Loader State
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -94,7 +128,6 @@ function WebsitePreview({
           height: scale > 0 ? `${1000 * scale}px` : "300px",
         }}
       >
-        {/* Loader Display */}
         {isLoading && (
           <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-2 bg-muted/50 animate-pulse">
             <Loader2Icon className="h-6 w-6 animate-spin text-muted-foreground" />
@@ -107,7 +140,7 @@ function WebsitePreview({
             src={url}
             title={title}
             loading="lazy"
-            onLoad={() => setIsLoading(false)} // Iframe load hone par loader band ho jayega
+            onLoad={() => setIsLoading(false)}
             className={`absolute left-0 top-0 max-w-none border-0 transition-opacity duration-300 ${
               isLoading ? "opacity-0" : "opacity-100"
             }`}

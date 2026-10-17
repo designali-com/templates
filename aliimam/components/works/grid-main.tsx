@@ -37,24 +37,25 @@ export async function GridMain() {
             <div className="grid gap-2 border-x-2 border-dotted p-2 md:grid-cols-2">
                 <div className="h-full flex flex-col items-center justify-center border border-dotted">
                     <div className="grid grid-cols-3 w-full p-2 gap-2">
-                        <Button render={<Link target="_blank" href="https://designali.com/tools/gradient" />}
+                        <Button nativeButton={false} render={<Link target="_blank" href="https://designali.com/tools/gradient" />}
                             variant="outline" className="text-xl border h-30 flex items-center justify-center">
                             <h1 className="text-xl hover:text-primary h-30 flex items-center justify-center">
                                 Gradient
                             </h1>
                         </Button>
                         <Button
+                        nativeButton={false}
                             render={<Link target="_blank" href="https://designali.com/icons" />}
                             variant="outline" className="text-xl border h-30 flex items-center justify-center">
                             <h1 className="text-xl hover:text-primary h-30 flex items-center justify-center">
                                 Icons
                             </h1> </Button>
-                        <Button render={<Link target="_blank" href="https://designali.com/logos" />}
+                        <Button nativeButton={false} render={<Link target="_blank" href="https://designali.com/logos" />}
                             variant="outline" className="text-xl border h-30 flex items-center justify-center">
                             <h1 className="text-xl hover:text-primary h-30 flex items-center justify-center">
                                 Logos
                             </h1> </Button>
-                        <Button render={<Link target="_blank" href="https://designali.com/vectors" />}
+                        <Button nativeButton={false} render={<Link target="_blank" href="https://designali.com/vectors" />}
                             variant="outline" className="text-xl border h-30 flex items-center justify-center">
                             <h1 className="text-xl hover:text-primary h-30 flex items-center justify-center">
                                 Vectors
@@ -62,25 +63,25 @@ export async function GridMain() {
                         <h1 className="text-xl bg-foreground text-background h-30 flex items-center justify-center">
                             Tools
                         </h1>
-                        <Button render={<Link target="_blank" href="https://designali.com/patterns" />}
+                        <Button nativeButton={false} render={<Link target="_blank" href="https://designali.com/patterns" />}
                             variant="outline" className="text-xl border h-30 flex items-center justify-center">
                             <h1 className="text-xl hover:text-primary h-30 flex items-center justify-center">
                                 Patterns
                             </h1>
                         </Button>
-                        <Button render={<Link target="_blank" href="https://dalim-fonts.vercel.app/" />}
+                        <Button nativeButton={false} render={<Link target="_blank" href="https://dalim-fonts.vercel.app/" />}
                             variant="outline" className="text-xl border h-30 flex items-center justify-center">
                             <h1 className="text-xl hover:text-primary h-30 flex items-center justify-center">
                                 Fonts
                             </h1>
                         </Button>
-                        <Button render={<Link target="_blank" href="https://dalim-graphic.vercel.app/" />}
+                        <Button nativeButton={false} render={<Link target="_blank" href="https://dalim-graphic.vercel.app/" />}
                             variant="outline" className="text-xl border h-30 flex items-center justify-center">
                             <h1 className="text-xl hover:text-primary h-30 flex items-center justify-center">
                                 Graphics
                             </h1>
                         </Button>
-                        <Button render={<Link target="_blank" href="https://dalim-visuals.vercel.app/" />}
+                        <Button nativeButton={false} render={<Link target="_blank" href="https://dalim-visuals.vercel.app/" />}
                             variant="outline" className="text-xl border h-30 flex items-center justify-center">
                             <h1 className="text-xl hover:text-primary h-30 flex items-center justify-center">
                                 Visuals

@@ -156,7 +156,7 @@ export default function ExperienceSection() {
                     </div>
 
                     <div className="space-x-2 pt-6">
-                        <Button nativeButton={false} render={<Link href="/cv.pdf" target="_blank" />}>
+                        <Button nativeButton={false} render={<Link download href="/cv.pdf" target="_blank" />}>
                             <Download className="text-white" />
                             <span>Download my CV</span>
                         </Button>
