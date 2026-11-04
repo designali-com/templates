@@ -47,7 +47,7 @@ export function TrustSection() {
                             <div className="flex gap-2 items-center justify-center">
                                 {isVisible && (
                                     <CounterNumber
-                                        value={14.5}
+                                        value={15.5}
                                         suffix="M+"
                                         decimalPlaces={1}
                                         className="text-primary text-5xl font-bold tracking-tight"
@@ -75,7 +75,7 @@ export function TrustSection() {
                             <div className="flex gap-2 items-center justify-center">
                                 {isVisible && (
                                     <CounterNumber
-                                        value={1.3}
+                                        value={1.4}
                                         decimalPlaces={1}
                                         suffix="M+"
                                         className="text-primary text-5xl font-bold tracking-tight"
