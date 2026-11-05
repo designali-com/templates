@@ -8,6 +8,7 @@ const examples = [
   { title: "Designali", url: "https://designali.com" },
   { title: "Vercel", url: "https://vercel.designali.com/" },
   { title: "Predict", url: "https://predict.fit" },
+  { title: "Predict UI", url: "https://predict.designali.com" },
   { title: "OPTM", url: "https://optmhealthcare.in" },
   { title: "Ali Imam Components", url: "https://aliimam-sigma.vercel.app/" },
   { title: "Therry", url: "https://therry.com" },
