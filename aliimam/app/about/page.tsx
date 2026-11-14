@@ -6,7 +6,6 @@ import { Story } from "@/components/about/story"
 export default function Page() {
   return (
     <div className="bg-background border-dotted border-t-2 relative flex min-h-svh flex-col">
-
       <HeroAbout />
       <AboutMe />
       <ExperienceSection />

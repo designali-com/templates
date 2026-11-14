@@ -1,6 +1,15 @@
 // @ts-nocheck -- skip type checking
-import * as story_1 from "../content/story/designali.mdx?collection=story&hash=1792055247507"
-import * as story_0 from "../content/story/aliimam.mdx?collection=story&hash=1792055247507"
+import * as story_10 from "../content/story/spara.mdx?collection=story&hash=1792055247507"
+import * as story_9 from "../content/story/predict.mdx?collection=story&hash=1792055247507"
+import * as story_8 from "../content/story/predict-web.mdx?collection=story&hash=1792055247507"
+import * as story_7 from "../content/story/predict-clinic.mdx?collection=story&hash=1792055247507"
+import * as story_6 from "../content/story/predict-automation.mdx?collection=story&hash=1792055247507"
+import * as story_5 from "../content/story/optm.mdx?collection=story&hash=1792055247507"
+import * as story_4 from "../content/story/optm-landing.mdx?collection=story&hash=1792055247507"
+import * as story_3 from "../content/story/designali.mdx?collection=story&hash=1792055247507"
+import * as story_2 from "../content/story/apurba.mdx?collection=story&hash=1792055247507"
+import * as story_1 from "../content/story/aliimam.mdx?collection=story&hash=1792055247507"
+import * as story_0 from "../content/story/agewell.mdx?collection=story&hash=1792055247507"
 import { _runtime } from "fumadocs-mdx/runtime/next"
 import * as _source from "../source.config"
-export const story = _runtime.docs<typeof _source.story>([{ info: {"path":"aliimam.mdx","fullPath":"content/story/aliimam.mdx"}, data: story_0 }, { info: {"path":"designali.mdx","fullPath":"content/story/designali.mdx"}, data: story_1 }], [])
+export const story = _runtime.docs<typeof _source.story>([{ info: {"path":"agewell.mdx","fullPath":"content/story/agewell.mdx"}, data: story_0 }, { info: {"path":"aliimam.mdx","fullPath":"content/story/aliimam.mdx"}, data: story_1 }, { info: {"path":"apurba.mdx","fullPath":"content/story/apurba.mdx"}, data: story_2 }, { info: {"path":"designali.mdx","fullPath":"content/story/designali.mdx"}, data: story_3 }, { info: {"path":"optm-landing.mdx","fullPath":"content/story/optm-landing.mdx"}, data: story_4 }, { info: {"path":"optm.mdx","fullPath":"content/story/optm.mdx"}, data: story_5 }, { info: {"path":"predict-automation.mdx","fullPath":"content/story/predict-automation.mdx"}, data: story_6 }, { info: {"path":"predict-clinic.mdx","fullPath":"content/story/predict-clinic.mdx"}, data: story_7 }, { info: {"path":"predict-web.mdx","fullPath":"content/story/predict-web.mdx"}, data: story_8 }, { info: {"path":"predict.mdx","fullPath":"content/story/predict.mdx"}, data: story_9 }, { info: {"path":"spara.mdx","fullPath":"content/story/spara.mdx"}, data: story_10 }], [])

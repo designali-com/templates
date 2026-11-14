@@ -1,0 +1,155 @@
+---
+title: Predict
+description: Designing and engineering PREDICT, a muscle-health and biological-age platform, from launch film and website to a code-first design system for health interfaces.
+image: /designs/predict.jpg
+href: https://predict.fit
+featured: true
+affiliation: Design Engineer · Predict Fit
+---
+
+# Making health visible before it's felt
+
+PREDICT is a muscle-health and biological-age platform from Predict Fit (Control Age Health Pvt. Ltd.). The premise is bold and simple: **muscle is the next vital sign**. A blood panel and body composition scan can show structural ageing years before you feel it, and PREDICT turns that into something a person can actually understand and act on.
+
+I joined as **Design Engineer in July 2026**. My job sits right in the middle of the product: shaping how PREDICT looks, how it speaks, and how it is built.
+
+> **Health should be measured before it is felt.**
+
+## The problem
+
+Health data is dense. A single PREDICT assessment produces a 45-biomarker blood panel, body composition results, and biological age scores across six physiological systems. To a clinician that is rich information. To most people it is a spreadsheet of unfamiliar words like *Aldolase A*, *hs-CRP* and *MDA*.
+
+The design challenge was never "make it pretty". It was:
+
+- How do you make someone *care* about a number like MuscleAGE™?
+- How do you show a result is outside range without causing panic?
+- How do you keep a premium, invitation-only brand feeling calm and scientific, not clinical and cold?
+- How do you let a small team ship dashboards, reports and marketing pages that all feel like one product?
+
+## What I worked on
+
+### 01. Branding and identity
+
+PREDICT had to feel scientific and premium without feeling cold.
+
+- **Logo and wordmark** with a clear, confident treatment that works from favicon to billboard.
+- **Bio-AgeClocks™ naming system:** MuscleAGE™, OrthoAGE™ and LegAGE™ share one visual grammar, so each new clock feels familiar.
+- **Colour and typography** documented in [Predict UI](https://predict.designali.com) so the brand lives in code, not just a PDF.
+- **Mascot and Loader:** small moments of personality that make waiting for results feel friendly.
+- **Tone of voice:** short, provocative lines like *"There is an organ that predicts everything."* and *"The earlier you know, the more you can change."*
+- **Brand guidelines** for partners, clinics and the press.
+
+### 02. Launch film and motion
+
+PREDICT launched as an invitation-only experience for founding members. I worked on the launch film and the motion language around it: biological-age reveals, animated dials, and the "MuscleAge™ now 2.4 years younger" moment.
+
+<div className="my-8 overflow-hidden border">
+  <video
+    src="https://res.cloudinary.com/drtoahmaa/video/upload/v1792047051/creatives/videos/Predict_Launch_Video_nzzr48.mp4"
+    controls
+    playsInline
+    preload="metadata"
+    className="w-full h-auto"
+  />
+  <p className="p-3 text-xs text-muted-foreground border-t">Predict launch video</p>
+</div>
+
+### 03. The website
+
+[predict.fit](https://predict.fit) had to do a lot of explaining in very little time. The page walks a visitor from one provocative idea (muscle predicts everything) to a clear journey:
+
+1. **The organ:** muscle, and why its decline drags four systems with it.
+2. **The signal:** blood as a live data stream that carries your true age.
+3. **Why muscle, why blood:** cardiovascular, metabolism, bone & joint, cognitive health.
+4. **Bio-AgeClocks™:** 30,000+ clinical data points, patent filed, peer-reviewed validation.
+5. **Inside the platform:** one dashboard for blood biomarkers and muscle imaging.
+6. **How it works:** Day 1 at home, Days 2-3 your score, Days 4-7 specialist review.
+7. **The ecosystem:** VO2 max, advanced blood tests, HYROX training, custom supplements and a longevity retreat.
+8. **Ask anything:** an AI Q&A that makes biological ageing *audible*.
+9. **Testimonials, FAQ and waitlist.**
+
+Supporting pages like the **biomarker library** (Aldolase A, CRP, MDA, Vitamin D) follow the same calm, editorial rhythm.
+
+### 04. Social media and content
+
+- **Launch teasers** built around the single line *"There is an organ that predicts everything."*
+- **Educational carousels:** what is muscle age, what is hs-CRP, why muscle is the next vital sign.
+- **Biomarker explainers** that reuse the Reference Range component as a graphic.
+- **Testimonial and founder-quote cards** (doctors, investors, longevity creators).
+- **Short-form video:** the Bio Clock animating from biological to chronological age.
+- **LinkedIn thought-leadership layouts** for the founder and scientific team.
+- **Waitlist and invite creatives** that make the founding-member offer feel exclusive.
+
+### 05. Bio-AgeClocks™ as a visual system
+
+The heart of PREDICT is its age clocks. Each compares biological age with chronological age. I designed them as reusable visual pieces rather than one-off graphics:
+
+- **Bio Clock:** the signature dial for biological vs. chronological age.
+- **Age Bar:** a linear version for dense reports and comparisons over time.
+
+Seeing *"your MuscleAGE™ improved by 2.4 years"* only works if the visual makes the change obvious in a second. Most of the iteration went into that.
+
+### 06. Product, reports and operations
+
+PREDICT is more than a marketing site. I also designed and built the product surfaces around it:
+
+- **Results dashboard and reports** for blood biomarkers, body composition and age scores.
+- **[Predict Web](/story/predict-web):** the public site, rebuilt as a fast, themeable Next.js app.
+- **[Predict Clinic](/story/predict-clinic):** role-based clinic software for admins, front desk, doctors and diagnostics.
+- **[Predict Automation](/story/predict-automation):** an operations portal for leads, calls, WhatsApp and ad ROI.
+
+## Predict UI: a design system in code
+
+The biggest piece of work is **[Predict UI](https://predict.designali.com)**, the design system behind PREDICT's dashboards, reports and clinical tools.
+
+> **Components for clear health interfaces.**
+
+Instead of a static Figma kit, I built it as a live, code-first system with documentation, so design and engineering share one source of truth.
+
+### Foundations
+
+Brand guidelines, colour, and typography, documented once and used everywhere.
+
+### Components
+
+22+ components built on **Base UI**: Accordion, Button, Calendar, Card, Dialog, Input, Popover, Progress, Radio Group, Sheet, Sidebar, Slider, Switch, Tabs, Toggle, Tooltip and more. Each one has its own docs page with live examples.
+
+### PREDICT UI
+
+Product-specific pieces that present a person's results: **Bio Clock, Age Bar, Mascot, Loader and Logo**.
+
+### Health tools
+
+This is the part I'm proudest of, because it is where design meets real health logic:
+
+- **Body Measurements:** BMI and body surface area, with several clinical formulas.
+- **Reference Range:** shows a biomarker value against its range, with a Z-score and a high/low flag (for example, hs-CRP).
+- **Age Calculator:** exact age on a given date, including correction for prematurity.
+
+### Health content
+
+Biomarkers, indices and reference ranges, structured as content so the same data can power the product, the reports and the website.
+
+## How I approached it
+
+- **Calm over alarming.** Out-of-range values are clear, but colour, language and layout never shout.
+- **One number first.** Every screen leads with the single result that matters, and detail comes after.
+- **Built, not handed off.** I take components from Figma into React, Next.js, TypeScript and Tailwind myself, so what ships matches the design.
+- **Systems over screens.** Every new screen should make the next one faster to build.
+
+## Tools
+
+Figma, Paper, React, Next.js, TypeScript, Tailwind CSS, Base UI, shadcn/ui, Vercel, Cursor, Claude, Adobe Creative Cloud.
+
+## Links
+
+- Product: [predict.fit](https://predict.fit)
+- Design system: [predict.designali.com](https://predict.designali.com)
+- Web: [predict-web.designali.com](https://predict-web.designali.com)
+- Clinic: [predict-clinic.designali.com](https://predict-clinic.designali.com)
+- Automation: [predict-automation.designali.com](https://predict-automation.designali.com)
+- Related: [OPTM Health Care](/story/optm)
+
+---
+
+**Measure early. Design clearly. Build it properly.**

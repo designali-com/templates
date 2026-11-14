@@ -1,165 +1,118 @@
 ---
 title: Designali
-description: I'm Ali Imam, a designer and developer focused on creating thoughtful digital experiences, visual systems, and modern interfaces.
+description: The story of designali, from a set of side projects called Dalim to a design and development studio with components, blocks, templates, icons and a shadcn/ui registry.
 image: /designs/designali.jpg
 href: https://designali.com
 featured: true
-affiliation: Design
+affiliation: Founder · Design & Engineering
 ---
 
-# Hi, I'm Ali Imam
+# Where thoughtful design meets production-ready code
 
-I'm a designer and developer who enjoys turning ideas into thoughtful, useful, and visually refined digital experiences.
+**designali** is my studio and my longest-running project. It is a design and development practice, an open component library, a template shop and a playground, all in one place.
 
-I work across **brand identity, visual design, UI/UX, design systems, and frontend development** — connecting design and code to build products that feel as good as they work.
+It started because I kept making the same things again and again for clients: heroes, pricing sections, logo walls, icon sets. At some point I asked a simple question:
 
-## What I do
+> **What if I designed it once, built it properly, and shared it with everyone?**
 
-I help turn early ideas into polished digital experiences.
+## The beginning: Dalim
 
-My work typically spans:
+Before designali there was **Dalim**, a collection of small, scrappy sites I built while teaching myself to code:
 
-- Brand identity and visual direction
-- UI/UX design
-- Web and product design
-- Design systems
-- Creative direction
-- Frontend development
-- React and Next.js
-- Interactive interfaces and experiences
+- **Dalim UI:** my first attempt at a component library
+- **Dalim Icons and Dalim Fonts:** asset collections for designers
+- **Dalim Visuals and Dalim Graphic:** galleries of my visual and graphic work
+- **Dalim Works and Dalim Agency:** early portfolio and studio sites
+- **Dalim Tools:** small utilities I needed myself
 
-## Design meets code
+None of them were perfect. But each one taught me something new about React, Next.js, deployment, or simply finishing a project. They are all still live, a record of how I learned.
 
-I believe the best digital products happen when design and development work closely together.
+Over time those separate experiments needed one home, one brand and one system. That became **designali**.
 
-That's why I don't stop at Figma.
+## What designali is today
 
-I enjoy taking an interface from the first visual concept all the way to a working implementation. This allows me to think about typography, spacing, interaction, responsiveness, accessibility, performance, and the small details that make an experience feel intentional.
+### Components
 
-My goal is simple:
+Animated, reusable UI pieces like **Bento, Counter Number, Dot Pattern, Grid Pattern, Gauge, Marquee, Typewriter** and more, built with React, Tailwind CSS and Motion.
 
-> **Design it beautifully. Build it properly.**
+### Blocks
+
+Ready-made page sections: **Hero, Header, Footer, Feature, Pricing, Clients, Testimonials, FAQs, Call to Action, Gallery, Contact, Authentication, Forms, Analytics, Blog, Portfolio, Ecommerce** and more.
+
+Every block installs with a single command through the shadcn CLI:
+
+```bash
+npx shadcn add @designali/hero-1
+```
+
+### Templates
+
+Full sites you can launch and customise: **Ali Imam**, **Portfolio Simple**, **Design Agency** and **Vercel**, with more like **FinAI**, **Payora** and **Resort** in progress.
+
+### Icons, logos and vectors
+
+Icon sets, brand logos and a large vector collection, with SVGs you can copy or download. The logos also ship as an npm package, `@aliimam/logos`.
+
+### Studio work
+
+Alongside open-source work, designali takes on client projects across art direction, motion design, web development and AI-assisted workflows, for brands and agencies that want design and engineering under one roof.
+
+## Milestones
+
+- **shadcn/ui Registry Directory:** designali is listed as a registry, so its blocks install directly with the shadcn CLI.
+- **21st.dev Ambassador (2025)**
+- **14.3M+ views** on my components on 21st.dev
+- **1.3M+ monthly views** on Pinterest
+
+These numbers still surprise me. They came from consistently shipping small, useful things and sharing them openly.
+
+## How it's built
+
+designali runs as a **monorepo** with Turborepo and pnpm:
+
+- `apps/web`: the main site, registry and docs
+- `apps/ui`, `apps/design` and `apps/www`: supporting apps and experiments
+- `templates/*`: each template as its own Next.js app
+- `packages/*`: shared UI and config
+
+The stack is **Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, Base UI, Fumadocs** and **Vercel**. Design happens in **Figma** and **Paper**, and a lot of the iteration now happens with **Claude** and **Cursor** at my side.
 
 ## My approach
 
 ### 01. Understand
 
-Before designing anything, I try to understand the problem, the audience, the product, and the business behind it.
+Start with the real problem: who is this for, and what do they need to ship?
 
-Good design starts with asking the right questions.
+### 02. Design
 
-### 02. Explore
+Typography, spacing and hierarchy come first. Decoration comes last.
 
-I explore different visual directions, layouts, typography, interactions, and ideas before settling on a solution.
+### 03. Systemise
 
-This is where concepts become systems.
-
-### 03. Design
-
-Once the direction is clear, I create a refined visual language that brings consistency across the entire experience.
-
-From large layouts to the smallest UI detail, everything has a purpose.
+Turn good one-off decisions into tokens, components and patterns.
 
 ### 04. Build
 
-When possible, I bring the design into code myself.
+Take it into code myself, so nothing gets lost in hand-off.
 
-Using technologies like **React, Next.js, TypeScript, and modern UI frameworks**, I turn designs into responsive, production-ready interfaces.
+### 05. Share
 
-### 05. Refine
-
-The final details matter.
-
-I iterate on spacing, motion, responsiveness, typography, interactions, and overall polish until the experience feels right.
+Document it, publish it, and let people use it.
 
 ## What I care about
 
-### Clarity
+- **Clarity:** design should communicate before it decorates.
+- **Craft:** small details like spacing, motion and empty states make the biggest difference.
+- **Accessibility and performance:** beautiful should also mean usable and fast.
+- **Openness:** good design should be accessible, not locked away.
 
-Design should communicate before it decorates.
+## Beyond designali
 
-### Simplicity
-
-Good interfaces don't need unnecessary complexity.
-
-### Consistency
-
-A strong design system creates a better experience for both users and teams.
-
-### Detail
-
-Small details often make the biggest difference.
-
-### Accessibility
-
-Beautiful interfaces should be usable by as many people as possible.
-
-### Performance
-
-A great experience should also be fast and reliable.
-
-## Design systems
-
-I'm particularly interested in building scalable design systems that connect visual language with real components.
-
-That means thinking beyond individual screens and creating reusable foundations for:
-
-- Typography
-- Color
-- Spacing
-- Components
-- Layouts
-- Patterns
-- Interaction
-- Documentation
-
-A design system should not just make products look consistent.
-
-It should make them **easier to design, build, maintain, and evolve.**
-
-## From design to development
-
-One of the things I enjoy most is working between disciplines.
-
-A typical workflow might look like:
-
-**Idea → Strategy → Design → System → Code → Product**
-
-Instead of treating design and development as separate steps, I see them as connected parts of the same process.
-
-This helps me make better decisions earlier and build interfaces that stay close to the original design intent.
-
-## Tools I use
-
-### Design
-
-- Figma
-- Adobe Creative Cloud
-- Photoshop
-- Illustrator
-- After Effects
-
-### Development
-
-- React
-- Next.js
-- TypeScript
-- Tailwind CSS
-- Shadcn/UI
-- Git
-- Vercel
-
-## Currently
-
-I'm continuing to explore the space between **design engineering, frontend development, and creative direction**.
-
-I'm especially interested in creating reusable components, design systems, templates, and digital products that make high-quality design more accessible.
+The same system thinking now powers my product work. The [Predict UI](/story/predict) design system is built on the same foundations and workflow I developed at designali, and it serves both [Predict](/story/predict) and [optm](/story/optm).
 
 ## Let's build something
 
-Whether you have a product idea, a brand that needs direction, or an interface that needs to be brought to life, I'm always interested in thoughtful projects.
-
-If you want to work together, explore my work at [designali.com](https://designali.com).
+Whether you need a product designed, a brand given direction, or an interface brought to life, I'd love to hear about it. Explore everything at [designali.com](https://designali.com).
 
 ---
 

@@ -1,5 +1,6 @@
 import { StoryCard } from "@/components/story/story"
 import { storySource } from "@/lib/source"
+import Link from "next/link"
 
 type Showcase = {
     url: string
@@ -25,11 +26,11 @@ export function Story() {
     return (
         <article className="border-b-2 border-dotted">
             <div className="mx-auto border-x-2 border-dotted max-w-6xl">
-                <h1 className="text-md text-center text-primary border-b-2 border-dotted p-4">
-                    My Stories
+                <h1 className="text-md hover:underline text-center text-primary border-b-2 border-dotted p-4">
+                    <Link href="/story">My Stories</Link>
                 </h1>
                 <div className="grid p-2 grid-cols-1 gap-2 lg:grid-cols-2">
-                    {showcases.map((showcase) => (
+                    {showcases.slice(0, 2).map((showcase) => (
                         <StoryCard
                             key={showcase.url}
                             {...showcase}
