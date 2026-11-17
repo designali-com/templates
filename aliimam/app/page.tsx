@@ -9,7 +9,7 @@ import { SkillsSection } from "@/components/home/skills"
 import { FAQSection } from "@/components/home/faq"
 import { CalMeeting } from "@/components/home/cal-meeting"
 import { Story } from "@/components/about/story"
-import CopiedBlock from "@/components/home/test"
+ 
 
 export default function Page() {
   return (

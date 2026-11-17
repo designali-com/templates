@@ -31,6 +31,6 @@
     "**/*.mdx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
-  ],
+, "../vercel/src/components/home/test.tsx"  ],
   "exclude": ["node_modules"]
 }

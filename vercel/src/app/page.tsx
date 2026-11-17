@@ -5,11 +5,13 @@ import { Hero } from "@/components/home/hero";
 import { Ovservality } from "@/components/home/ovservality";
 import { Ready } from "@/components/home/ready";
 import { Scale } from "@/components/home/scale";
+import {CopiedBlock} from "@/components/home/test"
 
 export default function Home() {
   return (
     <div className="">
       <Hero />
+      <CopiedBlock/>
       <Deploy/>
       <Connected/>
       <Ovservality/>
