@@ -60,7 +60,7 @@ export default function RootLayout({
       className={cn("antialiased", fontMono.variable, fontSerif.variable, "font-sans", inter.variable)}
     >
       <body className="w-full overflow-x-hidden"> 
-        <ThemeProvider>
+      <ThemeProvider>
           <CanvasRuler>
             <Header />
             {children}
