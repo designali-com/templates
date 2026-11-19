@@ -1,0 +1,55 @@
+---
+title: CopyCode
+description: A Chrome extension that copies any block on a web page as Next.js + shadcn/ui TSX, HTML, SVG or an image, ready to paste into your editor, Figma or Paper.
+image: /designs/copycode.jpg
+href: https://www.designali.com/copycode
+featured: true
+affiliation: Chrome Extension · Designali
+---
+
+# Copy any element from any website
+
+**CopyCode** is a Chrome extension I built for my own design and development workflow. Pick any block on a web page and copy it exactly, as **code** or as an **image**.
+
+It works in Chrome, Arc, Brave and Edge, and is live on the [Chrome Web Store](https://chromewebstore.google.com/detail/copycode/fajlocncaecjhlabpeoldjlfcmkonpdb).
+
+<div className="my-6 aspect-video overflow-hidden border border-zinc-200 dark:border-zinc-800">
+  <iframe
+    src="https://www.youtube.com/embed/giPQ8kFGU7Y"
+    title="CopyCode demo"
+    className="h-full w-full border-0"
+    loading="lazy"
+    allowFullScreen
+  />
+</div>
+
+## Formats
+
+| Tab | Formats |
+| --- | --- |
+| **Code** | **TSX** (Next.js + shadcn/ui + Tailwind, default) · **HTML** (inline styles) · **SVG** (vector code) |
+| **Image** | **PNG** · **JPG** · **SVG** (vector image) |
+
+## What makes it different
+
+- **Real shadcn/ui components:** shadcn components are detected by `data-slot` and mapped to real `<Button>`, `<Card>` and `<Input>` imports, with only the classes the site added on top.
+- **Truly responsive:** the page is replayed at mobile width and every breakpoint, so you get mobile-first classes like `flex-col md:flex-row`, not a snapshot of one screen.
+- **Exact to your theme:** classes come from computed CSS and are checked against your project's tokens.
+- **Fonts and icons resolved:** hashed `next/font` names turn back into Inter, and lucide icons become `<ArrowRightIcon />` from `lucide-react`.
+- **Paste into Figma:** SVG copies land in Figma as named frames, text layers, images and vector icons.
+- **Paste into Paper:** code copies also carry inline-styled HTML, which Paper pastes as frames with their flex layout intact.
+
+## How it works
+
+1. Click the CopyCode icon or press **Alt + Shift + C** on any page.
+2. Hover to highlight a block, use **↑ / ↓** to move to the parent or child, and press **Enter**.
+3. Paste anywhere. One copy holds several formats, and your editor, Figma and Paper each take the one they understand.
+
+A progress toast shows each step while the copy is built, like "Loading breakpoints 3/6 · md" or "Embedding images 2/5".
+
+## Links
+
+- Product page: [designali.com/copycode](https://www.designali.com/copycode)
+- Chrome Web Store: [CopyCode](https://chromewebstore.google.com/detail/copycode/fajlocncaecjhlabpeoldjlfcmkonpdb)
+- Docs: [README on GitHub](https://github.com/designali-com/designali/blob/main/tools/copycode/README.md)
+- Main story: [Designali](/story/designali)

@@ -1,0 +1,58 @@
+---
+title: Designali Mono
+description: A free, open-source monospace font for design and code, with 8 weights, a variable font, webfonts and a strict Term build for terminals.
+image: /designs/designali-mono.jpg
+href: https://www.designali.com/fonts
+featured: true
+affiliation: Type Design · Designali
+---
+
+# A monospace font for design and code
+
+**Designali Mono** is my own monospace typeface. I wanted one font that looks good in a design file, in a code editor and in a terminal, so headings, UI labels and code blocks can share the same voice.
+
+It is free and open source under the [SIL Open Font License 1.1](https://openfontlicense.org), for personal and commercial use.
+
+## What's included
+
+- **8 weights:** Thin, ExtraLight, Light, Regular, Medium, SemiBold, Bold and ExtraBold (100 to 800).
+- **Variable font:** one file with a `wght` axis from 100 to 800.
+- **TTF and OTF:** static builds of every weight for desktop apps and design tools.
+- **WOFF2:** webfonts, ready for `@font-face` or `next/font/local`.
+- **Term:** a strictly monospaced build for terminals.
+
+## Design notes
+
+- Clear shapes for characters that are easy to confuse: `0O`, `1lI`, and operators like `>=`, `!==` and `&&`.
+- Wide enough to read comfortably at small sizes, but still strong at display sizes.
+- Built for the designali design system, so it pairs with the components, blocks and templates.
+
+## The font page
+
+The [fonts page](https://www.designali.com/fonts) has a live type tester, a weight grid, a code sample, the full character set and copy-ready snippets.
+
+```css
+@font-face {
+  font-family: "Designali Mono";
+  src: url("DesignaliMono[wght].woff2") format("woff2-variations");
+  font-weight: 100 800;
+  font-display: swap;
+}
+```
+
+```tsx
+import localFont from "next/font/local"
+
+const designaliMono = localFont({
+  src: "./DesignaliMono[wght].woff2",
+  weight: "100 800",
+  variable: "--font-mono",
+})
+```
+
+## Links
+
+- Font page: [designali.com/fonts](https://www.designali.com/fonts)
+- Download: [designali-mono.zip](https://www.designali.com/downloads/designali-mono.zip)
+- Source: [github.com/designali-com/fonts](https://github.com/designali-com/fonts)
+- Main story: [Designali](/story/designali)
