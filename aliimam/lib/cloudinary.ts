@@ -29,3 +29,12 @@ export async function getAllWorkImages() {
     return result.resources;
 }
 
+export async function getBrandingImages(folder: "logos" | "packaging") {
+    const result = await cloudinary.search
+        .expression(`asset_folder:"creatives/${folder}" AND resource_type:image`)
+        .sort_by("created_at", "desc")
+        .max_results(100)
+        .execute();
+
+    return result.resources;
+}

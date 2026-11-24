@@ -17,11 +17,13 @@ import { Reels, Videos } from "./videos";
 
 type WorksTabsProps = {
   creativesContent: ReactNode;
+  brandingContent: ReactNode;
   allWorksContent: ReactNode;
 };
 
 function WorksTabsContent({
   creativesContent,
+  brandingContent,
   allWorksContent,
 }: WorksTabsProps) {
   const searchParams = useSearchParams();
@@ -99,10 +101,11 @@ function WorksTabsContent({
       </TabsContent>
 
       <TabsContent value="branding" className="w-full">
-        <div className="min-h-screen w-full">
-          <h1 className="mb-2 flex items-center justify-center py-10 text-center font-serif text-5xl">
+        <div className="w-full">
+          <h1 className="border-b-2 border-dotted py-10 text-center font-serif text-5xl">
             Branding
           </h1>
+          {brandingContent}
         </div>
       </TabsContent>
 
