@@ -1,49 +1,56 @@
-import { StoryCard } from "@/components/story/story"
+import type { Metadata } from "next"
+
+import { CaseStudyCard } from "@/components/portfolio/selected-work"
+import { Section, SectionHeader } from "@/components/portfolio/section"
+import { Contact } from "@/components/portfolio/contact"
+import { caseStudies } from "@/lib/portfolio"
 import { storySource } from "@/lib/source"
 
-type Showcase = {
-  url: string
-  data: {
-    title: string 
-    image: string
-    affiliation: string
-  }
+export const metadata: Metadata = {
+  title: "Case studies",
+  description:
+    "Case studies by Ali Imam across design leadership, product design, design systems, brand and frontend engineering.",
 }
 
 export default function Page() {
-  // Map or adapt the output of getPages() to satisfy the Showcase[] type
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const showcases: Showcase[] = storySource.getPages().map((page: any) => ({
-    url: page.url,
-    data: {
-      title: page.data.title ?? "",
-      image: page.data.image ?? "",
-      affiliation: page.data.affiliation ?? "",
-    },
-  }))
+  const published = new Set(storySource.getPages().map((page) => page.url))
+  const studies = caseStudies.filter((study) => published.has(`/story/${study.slug}`))
 
   return (
-    <article className="border-y-2 border-dotted">
-      <div className="mx-auto border-x-2 border-dotted max-w-6xl py-10 px-2">
-      <h2 className="mb-2 text-center text-5xl font-serif">
-        Story
-      </h2>
-      <h3 className="text-muted-foreground mx-auto mb-8 text-center text-lg">
-        Ali Imam's journey in the world of design and development.
-      </h3>
-      <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
-        {showcases.map((showcase) => (
-          <StoryCard
-            key={showcase.url}
-            {...showcase}
-            href={showcase.url}
-            title={showcase.data.title ?? ""}
-            image={showcase.data.image ?? ""}
-            affiliation={showcase.data.affiliation ?? ""}
-          />
-        ))}
-      </div>
-      </div>
-    </article>
+    <div className="border-t-2 border-dotted">
+      <section>
+        <div className="mx-auto max-w-6xl border-x-2 border-dotted px-6 py-16 text-center md:py-20">
+          <p className="text-xs font-medium tracking-widest text-primary uppercase">Case studies</p>
+          <h1 className="mx-auto mt-3 max-w-3xl font-serif text-5xl text-balance md:text-7xl">
+            Work I&apos;ve led, designed and built.
+          </h1>
+          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+            {studies.length} projects across health-tech, developer tools, open source and brand.
+            Each one shows my role, the problem, the process and what shipped.
+          </p>
+        </div>
+      </section>
+      <Section>
+        <SectionHeader eyebrow="Featured" title="Start here" />
+        <div className="grid gap-2 p-2 md:grid-cols-2">
+          {studies
+            .filter((study) => study.featured)
+            .map((study) => (
+              <CaseStudyCard key={study.slug} study={study} large />
+            ))}
+        </div>
+      </Section>
+      <Section>
+        <SectionHeader eyebrow="More" title="Sites, microsites and experiments" />
+        <div className="grid gap-2 p-2 md:grid-cols-2 lg:grid-cols-3">
+          {studies
+            .filter((study) => !study.featured)
+            .map((study) => (
+              <CaseStudyCard key={study.slug} study={study} />
+            ))}
+        </div>
+      </Section>
+      <Contact withCalendar={false} />
+    </div>
   )
 }

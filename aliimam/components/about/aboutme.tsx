@@ -101,24 +101,16 @@ const images = [
 
 export const AboutMe = () => {
     return (
-        <section className="relative overflow-hidden border-b-2 border-dotted">
+        <section className="relative overflow-hidden border-t-2 border-dotted">
             <div className="px-6 text-center pt-12 md:px-12">
-                <p className="text-sm pb-2 text-muted-foreground">
-                    A little bit about me.
+                <p className="text-xs font-medium tracking-widest uppercase text-primary">
+                    Outside the brief
                 </p>
-                <h2 className="mt-2 text-3xl font-serif md:text-5xl">
-                    Things I have done.
+                <h2 className="mt-3 text-3xl font-serif md:text-5xl">
+                    The things that keep me curious.
                 </h2>
-                <p className="text-muted-foreground max-w-3xl py-8 mx-auto">
-                    Design Engineer & Visual Designer with 7+ years of experience crafting end-to-end digital experiences across
-
-                    product design, branding, and frontend development and founder of designali. Proven track record of building
-
-                    design systems from the ground up, translating brand vision into cohesive digital products, and bridging the
-
-                    gap between design and code. Experienced in creating scalable UI components, interactive web experiences, and
-
-                    modern design solutions for SaaS, fintech, and creative technology products.
+                <p className="text-muted-foreground max-w-xl pt-4 mx-auto">
+                    Drag things around. This is the playful side of how I work.
                 </p>
             </div>
 

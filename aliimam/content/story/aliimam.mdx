@@ -1,129 +1,46 @@
 ---
-title: Ali Imam - Portfolio
-description: A detailed showcase featuring interactive components, embedded live previews, code playgrounds, and project links.
+title: This Portfolio
+description: Designing and building my own portfolio as a product for one audience, the hiring team, with Next.js, MDX and Tailwind CSS.
 image: /designs/aliimam.jpg
 href: https://aliimam.designali.com
-featured: true
-affiliation: Design & Engineering
+featured: false
+affiliation: Design & Engineering · Personal
 ---
 
-# Ali Imam — Projects, Interactive Components & Media
+# A portfolio is a product, too
 
-Welcome to the extended portfolio document. Here you'll find a detailed breakdown of my key projects, live interactive iframe previews, architectural images, and quick links to repositories and live demos.
+Most portfolios are galleries. This one is designed like a product, for one user: **a recruiter or hiring manager with a few minutes and a role to fill.**
 
----
+## The problem
 
-## Featured Project: Designali UI & Design System
+My work spans a lot: design leadership, product design, design systems, brand, motion and frontend code. Shown all at once, that reads as noise. A hiring team needs to answer three questions fast:
 
-Designali is a modern UI component library and documentation platform built to bridge the gap between design tokens and production-ready code.
+1. **What does he do?** A clear title and one-line value, above the fold.
+2. **Can he do it for us?** Proof mapped to the role they're hiring for.
+3. **How do we talk to him?** Email, CV, LinkedIn and a calendar, never more than one click away.
 
-### 🖼️ Project Visual Showcase
+## Structure
 
-<div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-  <figure className="border border-zinc-200 dark:border-zinc-800 overflow-hidden p-2 bg-zinc-50 dark:bg-zinc-900">
-    <img 
-      src="/designs/aliimam.jpg" 
-      alt="Ali Imam Design System Overview" 
-      className="rounded-lg w-full h-auto object-cover"
-    />
-    <figcaption className="text-xs text-center text-zinc-500 mt-2">
-      Figure 1.1: Designali Brand & System Identity Preview
-    </figcaption>
-  </figure>
-  
-  <figure className="border border-zinc-200 dark:border-zinc-800 overflow-hidden p-2 bg-zinc-50 dark:bg-zinc-900">
-    <img 
-      src="/designs/aliimam.jpg" 
-      alt="Component Library Showcase" 
-      className="rounded-lg w-full h-auto object-cover"
-    />
-    <figcaption className="text-xs text-center text-zinc-500 mt-2">
-      Figure 1.2: Interactive Component Gallery & Masonry Grid
-    </figcaption>
-  </figure>
-</div>
+- **Hero:** title, availability, location and three actions (case studies, CV, email).
+- **Numbers:** years of experience, component views, monthly Pinterest views and live products, each with a source.
+- **Case studies:** every card leads with my role, company and year, then the outcomes.
+- **What I bring to a team:** one card per role (Head of Design, Founding Designer, Design Engineer, Product, Frontend, Brand), each linked to proof.
+- **Experience, process and toolkit:** short, scannable, and backed by the full story on the About page.
+- **FAQ for recruiters:** roles I'm open to, location, remote work and how I work with teams.
+- **Contact:** email, LinkedIn, CV and a booking calendar.
 
----
+## Design decisions
 
-### 🌐 Live Preview & Iframe Integration
+- **One source of truth.** All content lives in one typed data file, so the home page, about page, case studies and footer never disagree.
+- **Case studies in MDX.** Each project is a Markdown file with a structured summary panel (role, company, year, scope, live link, outcomes) on top.
+- **Keep the brand.** The dotted grid, serif headlines and blue accent come from the designali system, so the portfolio feels like my work, not a template.
+- **Search and AI friendly.** Clear metadata and Person structured data, plus "Ask AI about Ali Imam" links in the footer.
 
-Aap yahan direct live preview ya interactive prototype iframe embed kar sakte hain:
+## Built with
 
-<div className="my-6 overflow-hidden border border-zinc-200 dark:border-zinc-800">
-  <iframe 
-    src="https://aliimam.designali.com" 
-    title="Designali Live Preview"
-    className="w-full h-[450px] border-0"
-    loading="lazy"
-  />
-  <div className="p-3 bg-zinc-100 dark:bg-zinc-900 text-xs text-zinc-600 dark:text-zinc-400 flex justify-between items-center">
-    <span>Interactive Live Sandbox Preview</span>
-    <a 
-      href="https://aliimam.designali.com" 
-      target="_blank" 
-      rel="noopener noreferrer"
-      className="text-indigo-600 dark:text-indigo-400 font-medium hover:underline flex items-center gap-1"
-    >
-      Open in new tab
-    </a>
-  </div>
-</div>
+Next.js, React, TypeScript, Tailwind CSS, Base UI, Fumadocs MDX and Motion, deployed on Vercel.
 
----
+## Links
 
-### 🔗 Project Quick Links & Resources
-
-Yahan kuch important links hain jo mere repositories, live deployments, aur component documentation ko point karte hain:
-
-<div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
-  <a 
-    href="https://aliimam.designali.com" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="p-4  border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-all bg-white dark:bg-zinc-950 group block"
-  >
-    <div className="flex items-center justify-between mb-2">
-      <h4 className="font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
-        Designali Portfolio & System 🚀
-      </h4>
-      <span className="text-zinc-400">↗</span>
-    </div>
-    <p className="text-sm text-zinc-500 dark:text-zinc-400">
-      Explore the main production website, components, blocks, and templates.
-    </p>
-  </a>
-
-  <a 
-    href="https://github.com" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="p-4 border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-all bg-white dark:bg-zinc-950 group block"
-  >
-    <div className="flex items-center justify-between mb-2">
-      <h4 className="font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
-        GitHub Source Code 📦
-      </h4>
-      <span className="text-zinc-400">↗</span>
-    </div>
-    <p className="text-sm text-zinc-500 dark:text-zinc-400">
-      Check out clean TypeScript implementations, Tailwind configurations, and CLI tools.
-    </p>
-  </a>
-</div>
-
----
-
-## Interactive Components Breakdown
-
-### 1. 3D & Orbital Carousels
-Built with React and Framer Motion to deliver butter-smooth rotations and physics-backed interactions.
-
-### 2. Pinterest-Style Masonry Grids
-Dynamic column calculation ensuring responsive layouts for dense design asset galleries.
-
-### 3. Figma API Integration Pipeline
-Node.js and Next.js backend utility to parse design layers and stream SVG/PNG exports instantly.
-
----
-
-*Want to collaborate or discuss a project? Visit [designali.com](https://aliimam.designali.com) to get in touch.*
+- Live: [aliimam.designali.com](https://aliimam.designali.com)
+- Related: [Designali](/story/designali)

@@ -1,57 +1,56 @@
-"use client";
-
-import Link from "next/link";
-
-import { cn } from "@/lib/utils"; 
-
-import { Button } from "@/components/ui/button";
-import { ModeSwitcher } from "./toggle-mode";
+import Link from "next/link"
  
+
+import { Button } from "@/components/ui/button"
+import { profile } from "@/lib/portfolio"
+
+import { ModeSwitcher } from "./toggle-mode"
+
+const navItems = [ 
+  { href: "/story", label: "Case studies" },
+  { href: "/works", label: "Works" },
+  { href: "/about", label: "About" },
+]
+
 export function Header() {
-    
+  return (
+    <header className="z-50 mx-auto w-full max-w-6xl border-x-2 border-dotted">
+      <nav aria-label="Main" className="flex h-14 w-full items-center justify-between gap-2 px-2 md:h-12">
+        <Link
+          href="/"
+          className="flex min-w-0 items-baseline gap-2 pl-1 font-medium transition-colors hover:text-primary"
+        >
+          {profile.name}
+          
+        </Link>
 
-    return (
-        <header className={"z-50 mx-auto w-full max-w-6xl border-dotted border-x-2 md:transition-all md:ease-out"} >
-            <nav
-                className={cn(
-                    "flex h-14 w-full items-center justify-between px-2 md:h-12 md:transition-all md:ease-out",
-                )} 
-            >
-                <div className="flex items-center gap-1">
-                    <Button
-                        size="sm"
-                        render={<Link href={"/works"} />}
-                        nativeButton={false}
-                    >
-                        Works
-                    </Button>
-                    <Button
-                        size="sm"
-                        variant="outline"
-                        render={<Link href={"/about"} />}
-                        nativeButton={false}
-                    >
-                        About
-                    </Button>
+        <ul className="hidden items-center gap-1 md:flex">
+          {navItems.map((item) => (
+            <li key={item.href}>
+              <Button size="sm" variant="ghost" nativeButton={false} render={<Link href={item.href} />}>
+                {item.label}
+              </Button>
+            </li>
+          ))}
+        </ul>
 
-                </div>
-                <Link
-                    href="/"
-                    className="ml-2 hover:text-primary transition-all duration-300 font-medium flex items-center gap-2"
-                    aria-label="Designali"
-                >
-                    Ali Imam
-                </Link>
-
-                <div className="hidden items-center gap-2 md:flex">
-                    <ModeSwitcher />
-                    <Button nativeButton={false} size="sm" 
-                    render={<Link target="_blank" href="https://cal.com/aliimam/30min" />}>
-                        Let's Talk 
-                    </Button>
-                </div>
-
-            </nav>
-        </header>
-    );
+        <div className="flex items-center gap-1">
+          <ModeSwitcher />
+           
+          <Button size="sm" nativeButton={false} render={<Link href="/#contact" />}>
+            Hire me
+          </Button>
+        </div>
+      </nav>
+      <ul className="flex items-center justify-between gap-1 overflow-x-auto border-t border-dotted px-2 py-1 md:hidden">
+        {navItems.map((item) => (
+          <li key={item.href}>
+            <Button size="xs" variant="ghost" nativeButton={false} render={<Link href={item.href} />}>
+              {item.label}
+            </Button>
+          </li>
+        ))}
+      </ul>
+    </header>
+  )
 }

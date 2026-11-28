@@ -22,10 +22,10 @@ const logos = [
 
 export function Clients() {
     return (
-        <div className="relative mx-auto w-full border-x-2 max-w-6xl border-t-0 border-dotted">
-            <h1 className="text-md text-center text-primary border-b-2 border-dotted p-4">
-                Trusted by the world’s most creative companies.
-            </h1>
+        <div className="relative mx-auto w-full border-x-2 max-w-6xl border-t-2 border-dotted">
+            <p className="text-xs font-medium tracking-widest uppercase text-center text-muted-foreground border-b-2 border-dotted p-4">
+                Brands, studios and teams I&apos;ve designed for
+            </p>
 
             <div className="p-2">
                 <div className="mx-auto grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5">
@@ -34,7 +34,8 @@ export function Clients() {
                             <img
                                 className="mx-auto h-12 w-auto grayscale dark:invert"
                                 src={tech.image}
-                                alt={tech.name}
+                                alt={`${tech.name} logo`}
+                                loading="lazy"
                             />
                         </div>
                     ))} 

@@ -21,7 +21,6 @@ const testimonials = [
   { type: "tweet", id: "2027419258607587442" },
   { type: "tweet", id: "1986146837234102380" },
   { type: "tweet", id: "1846044133665739103" },
-  { type: "tweet", id: "1970231768851591435" },
   { type: "tweet", id: "2021254834486378682" },
   { type: "tweet", id: "1937752881844695397" },
   { type: "tweet", id: "1959903753047359860" },
@@ -30,14 +29,14 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <div className="relative h-full w-full border-y-2 border-dotted">
+    <div id="testimonials" className="relative h-full w-full border-t-2 border-dotted">
       <div className="relative">
         <h1 className="relative left-1/2 z-0 w-screen -translate-x-1/2 py-6 text-center text-[20vw] font-black tracking-tighter uppercase leading-[0.6em] md:py-0 md:text-[14vw] md:leading-none">
           Wall <br className="block md:hidden" /> of Love
         </h1>
 
         <p className="absolute top-1/2 left-1/2 z-10 w-full -translate-x-1/2 -translate-y-1/2 bg-background/50 px-20 py-1 text-center text-xs text-foreground backdrop-blur-md md:text-sm">
-          Real words from the people who trusted designali with their ideas.
+          Kind words from founders, designers and developers I've worked with.
         </p>
       </div>
 

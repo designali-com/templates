@@ -1,31 +1,28 @@
-import { GallerySection } from "@/components/home/gallery"
-import { Hero } from "@/components/home/hero"
-import { TrustSection } from "@/components/home/trust"
+import { Hero } from "@/components/portfolio/hero"
+import { Stats } from "@/components/portfolio/stats"
+import { SelectedWork } from "@/components/portfolio/selected-work"
+import { Capabilities, Process } from "@/components/portfolio/capabilities"
+import { Experience } from "@/components/portfolio/experience"
+import { Toolkit } from "@/components/portfolio/toolkit"
+import { Contact } from "@/components/portfolio/contact"
 import { Clients } from "@/components/home/clients"
 import { Testimonials } from "@/components/home/testmonials"
-import { BuildWith } from "@/components/home/build-with"
-import { Summary } from "@/components/home/summary"
-import { SkillsSection } from "@/components/home/skills"
 import { FAQSection } from "@/components/home/faq"
-import { CalMeeting } from "@/components/home/cal-meeting"
-import { Story } from "@/components/about/story"
- 
 
 export default function Page() {
   return (
-    <div className="bg-background border-dotted border-t-2 relative flex min-h-svh flex-col">
+    <div className="relative flex min-h-svh flex-col border-t-2 border-dotted bg-background">
       <Hero />
-       
-      <TrustSection />
-      <GallerySection />
-      <Clients /> 
-      <Summary />
-      <SkillsSection />
-      <BuildWith />
+      <Stats />
+      <SelectedWork />
+      <Clients />
+      <Capabilities />
+      <Experience limit={5} />
+      <Process />
+      <Toolkit />
       <Testimonials />
-      <Story />
       <FAQSection />
-      <CalMeeting />
+      <Contact />
     </div>
   )
 }
